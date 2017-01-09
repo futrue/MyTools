@@ -32,29 +32,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
-    [self SoundManager];
+    [self soundManager];
     self.wrap = YES;
 }
 
 - (void)setupUI {
+    self.view.backgroundColor = BgColor;
     [self.view addSubview:self.typeBtn];
     [self.view addSubview:self.statusButton];
     [self.view addSubview:self.carousel];
     [self.typeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.equalTo(self.view).offset(30);
+        make.top.equalTo(self.view).offset(70);
+        make.left.equalTo(self.view).offset(30);
+        make.size.mas_equalTo(CGSizeMake(40, 40));
     }];
     
     [self.statusButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).offset(30);
+        make.top.equalTo(self.view).offset(70);
         make.right.equalTo(self.view).offset(-30);
     }];
 
-    [self.carousel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.equalTo(self.view).offset(30);
-    }];
+//    [self.carousel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.top.equalTo(self.view).offset(30);
+//    }];
 
 }
-- (void)SoundManager{
+- (void)soundManager{
     self.typeBtn.selected = YES;
     [self playLocalFile];
     [self oFFType];
@@ -63,6 +66,18 @@
 - (void)swichType {
     UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"图片类型" delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:@"type1", @"type2", @"type3", @"type4", @"type5", @"type6", @"type7", @"type8", nil];
     [sheet showInView:self.view];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex{
+    for (UIView *view in self.carousel.visibleItemViews)
+    {
+        view.alpha = 1.0;
+    }
+    
+    [UIView beginAnimations:nil context:nil];
+    self.carousel.type = (int)buttonIndex;
+    [UIView commitAnimations];
+    
 }
 
 - (void)oFFType {
@@ -151,9 +166,7 @@
 - (UIButton *)typeBtn {
     if (!_typeBtn) {
         _typeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-//        [_typeBtn setImage:[UIImage imageNamed:@"1.jpg"] forState:UIControlStateNormal];
         [_typeBtn setBackgroundImage:[UIImage imageNamed:@"1.jpg"] forState:UIControlStateNormal];
-//        [_typeBtn addTarget:self action:@selector(oFFType) forControlEvents:UIControlEventTouchUpInside];
         [_typeBtn addTarget:self action:@selector(swichType) forControlEvents:UIControlEventTouchUpInside];
         [_typeBtn sizeToFit];
 }

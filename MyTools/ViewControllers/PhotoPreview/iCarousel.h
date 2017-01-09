@@ -79,8 +79,8 @@ iCarouselType;
 }
 #endif
 
-@property (nonatomic, assign) IBOutlet id<iCarouselDataSource> dataSource;
-@property (nonatomic, assign) IBOutlet id<iCarouselDelegate> delegate;
+@property (nonatomic, weak) id<iCarouselDataSource> dataSource;
+@property (nonatomic, weak) id<iCarouselDelegate> delegate;
 @property (nonatomic, assign) iCarouselType type;
 @property (nonatomic, assign) CGFloat perspective;
 @property (nonatomic, assign) CGFloat decelerationRate;

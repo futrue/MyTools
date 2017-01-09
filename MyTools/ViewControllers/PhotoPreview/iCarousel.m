@@ -157,6 +157,7 @@
 	if ((self = [super initWithFrame:frame]))
     {
 		[self setup];
+        [self didMoveToSuperview];
 	}
 	return self;
 }

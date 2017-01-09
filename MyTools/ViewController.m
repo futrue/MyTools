@@ -20,6 +20,9 @@
 #import "CoreAnimation_test.h"
 #import "Alert_test.h"
 #import "PhotosPreviewVC.h"
+#import "YYLabel_testVC.h"
+#import "StackView_test.h"
+#import "Masonry_test.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -51,6 +54,13 @@
 
     [self.dataSource addObject:arr];
     
+    NSMutableArray *arr2 = [NSMutableArray array];
+    [arr2 addObject:NSStringFromClass([YYLabel_testVC class])];
+    [arr2 addObject:NSStringFromClass([StackView_test class])];
+    [arr2 addObject:NSStringFromClass([Masonry_test class])];
+
+    [self.dataSource addObject:arr2];
+
     [self.view addSubview:self.tableView];
     [self.tableView reloadData];
 }
@@ -68,6 +78,10 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return [_dataSource count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 10;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -90,6 +104,10 @@
     vc.title = _dataSource[indexPath.section][indexPath.row];
     if (!vc) {
         NSLog(@"no no no");
+        return;
+    }
+    if ([_dataSource[indexPath.section][indexPath.row] isEqualToString:@"PhotosPreviewVC"]) {
+        NSLog(@"有crash");
         return;
     }
     [self.navigationController pushViewController:vc animated:YES];
