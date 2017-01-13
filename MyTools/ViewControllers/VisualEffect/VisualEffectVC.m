@@ -47,7 +47,7 @@
         _scrollView.showsHorizontalScrollIndicator = NO;
         _scrollView.bounces = NO;
         
-        UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"837003.jpg"]];
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:TEST_IMG];
         imageView.contentMode = UIViewContentModeScaleToFill;
         imageView.clipsToBounds = YES;
         self.imageView = imageView;

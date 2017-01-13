@@ -23,6 +23,11 @@
 #import "YYLabel_testVC.h"
 #import "StackView_test.h"
 #import "Masonry_test.h"
+#import "Date_testVC.h"
+#import "Wave&DropDown.h"
+#import "SystemActions_test.h"
+#import "CustomButton_test.h"
+#import "Slider_testVC.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -48,18 +53,24 @@
     [arr addObject:NSStringFromClass([RegularExpressionVC class])];
     [arr addObject:NSStringFromClass([RandomFllowersVC class])];
     [arr addObject:NSStringFromClass([HoleGuide_test class])];
-    [arr addObject:NSStringFromClass([CoreAnimation_test class])];
-    [arr addObject:NSStringFromClass([Alert_test class])];
-    [arr addObject:NSStringFromClass([PhotosPreviewVC class])];
-
     [self.dataSource addObject:arr];
     
     NSMutableArray *arr2 = [NSMutableArray array];
+    [arr2 addObject:NSStringFromClass([PhotosPreviewVC class])];
+    [arr2 addObject:NSStringFromClass([CoreAnimation_test class])];
+    [arr2 addObject:NSStringFromClass([Alert_test class])];
     [arr2 addObject:NSStringFromClass([YYLabel_testVC class])];
     [arr2 addObject:NSStringFromClass([StackView_test class])];
     [arr2 addObject:NSStringFromClass([Masonry_test class])];
-
+    [arr2 addObject:NSStringFromClass([Date_testVC class])];
+    [arr2 addObject:NSStringFromClass([Wave_DropDown class])];
+    [arr2 addObject:NSStringFromClass([SystemActions_test class])];
+    [arr2 addObject:NSStringFromClass([CustomButton_test class])];
     [self.dataSource addObject:arr2];
+    
+    NSMutableArray *arr3 = [NSMutableArray array];
+    [arr3 addObject:NSStringFromClass([Slider_testVC class])];
+    [self.dataSource addObject:arr3];
 
     [self.view addSubview:self.tableView];
     [self.tableView reloadData];
@@ -110,6 +121,7 @@
         NSLog(@"有crash");
         return;
     }
+    vc.view.backgroundColor = COLOR_BACKGROUND;
     [self.navigationController pushViewController:vc animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

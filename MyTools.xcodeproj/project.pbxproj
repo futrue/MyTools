@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		390C78FAA8B9EC39902000D8 /* libPods-MyToolsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E555444C98BAAD7F7D4381 /* libPods-MyToolsTests.a */; };
+		8E0C27AC1E287E9D0067C7E0 /* beijing.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0C27A71E287E9D0067C7E0 /* beijing.png */; };
+		8E0C27AD1E287E9D0067C7E0 /* beijing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0C27A81E287E9D0067C7E0 /* beijing@2x.png */; };
+		8E0C27AE1E287E9D0067C7E0 /* JSWave.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C27AB1E287E9D0067C7E0 /* JSWave.m */; };
+		8E0C27B11E287EC20067C7E0 /* Wave&DropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C27B01E287EC20067C7E0 /* Wave&DropDown.m */; };
+		8E0C27B51E287F520067C7E0 /* SystemActions_test.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C27B41E287F520067C7E0 /* SystemActions_test.m */; };
+		8E0C27B91E2885D10067C7E0 /* GXCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C27B81E2885D10067C7E0 /* GXCustomButton.m */; };
+		8E0C27BC1E2885FA0067C7E0 /* CustomButton_test.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C27BB1E2885FA0067C7E0 /* CustomButton_test.m */; };
+		8E0C27C31E2887570067C7E0 /* GXScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C27C01E2887570067C7E0 /* GXScrollView.m */; };
+		8E0C27C41E2887570067C7E0 /* GXSlideBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C27C21E2887570067C7E0 /* GXSlideBtn.m */; };
+		8E0C27C71E2887780067C7E0 /* Slider_testVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C27C61E2887780067C7E0 /* Slider_testVC.m */; };
+		8E0C27CB1E28884A0067C7E0 /* LXViewSelectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C27CA1E28884A0067C7E0 /* LXViewSelectorController.m */; };
+		8E0CCA411E25CD41009501D5 /* DDOrderListAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CCA401E25CD41009501D5 /* DDOrderListAdView.m */; };
+		8E2B45F31E24D6B2007F51DB /* Date_testVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2B45F21E24D6B2007F51DB /* Date_testVC.m */; };
+		8E2B45F61E24E765007F51DB /* OrderListAdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2B45F51E24E765007F51DB /* OrderListAdManager.m */; };
 		8E6A3BB11E1CC9F700CDFF7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6A3BB01E1CC9F700CDFF7E /* main.m */; };
 		8E6A3BB41E1CC9F700CDFF7E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6A3BB31E1CC9F700CDFF7E /* AppDelegate.m */; };
 		8E6A3BB71E1CC9F700CDFF7E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6A3BB61E1CC9F700CDFF7E /* ViewController.m */; };
@@ -147,6 +161,32 @@
 		5BC3649FABE15FFB3DCFEB8D /* Pods-MyToolsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyToolsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyToolsUITests/Pods-MyToolsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7B2BE95D133B94909C9CCB35 /* Pods-MyToolsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyToolsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyToolsTests/Pods-MyToolsTests.release.xcconfig"; sourceTree = "<group>"; };
 		7CD377259767B03DE21795DF /* Pods-MyTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTools.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTools/Pods-MyTools.release.xcconfig"; sourceTree = "<group>"; };
+		8E0C27A71E287E9D0067C7E0 /* beijing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beijing.png; sourceTree = "<group>"; };
+		8E0C27A81E287E9D0067C7E0 /* beijing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beijing@2x.png"; sourceTree = "<group>"; };
+		8E0C27AA1E287E9D0067C7E0 /* JSWave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWave.h; sourceTree = "<group>"; };
+		8E0C27AB1E287E9D0067C7E0 /* JSWave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWave.m; sourceTree = "<group>"; };
+		8E0C27AF1E287EC20067C7E0 /* Wave&DropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wave&DropDown.h"; sourceTree = "<group>"; };
+		8E0C27B01E287EC20067C7E0 /* Wave&DropDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Wave&DropDown.m"; sourceTree = "<group>"; };
+		8E0C27B31E287F520067C7E0 /* SystemActions_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemActions_test.h; sourceTree = "<group>"; };
+		8E0C27B41E287F520067C7E0 /* SystemActions_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemActions_test.m; sourceTree = "<group>"; };
+		8E0C27B71E2885D10067C7E0 /* GXCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXCustomButton.h; sourceTree = "<group>"; };
+		8E0C27B81E2885D10067C7E0 /* GXCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXCustomButton.m; sourceTree = "<group>"; };
+		8E0C27BA1E2885FA0067C7E0 /* CustomButton_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton_test.h; sourceTree = "<group>"; };
+		8E0C27BB1E2885FA0067C7E0 /* CustomButton_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton_test.m; sourceTree = "<group>"; };
+		8E0C27BF1E2887570067C7E0 /* GXScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXScrollView.h; sourceTree = "<group>"; };
+		8E0C27C01E2887570067C7E0 /* GXScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXScrollView.m; sourceTree = "<group>"; };
+		8E0C27C11E2887570067C7E0 /* GXSlideBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXSlideBtn.h; sourceTree = "<group>"; };
+		8E0C27C21E2887570067C7E0 /* GXSlideBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXSlideBtn.m; sourceTree = "<group>"; };
+		8E0C27C51E2887780067C7E0 /* Slider_testVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slider_testVC.h; sourceTree = "<group>"; };
+		8E0C27C61E2887780067C7E0 /* Slider_testVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Slider_testVC.m; sourceTree = "<group>"; };
+		8E0C27C91E28884A0067C7E0 /* LXViewSelectorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXViewSelectorController.h; sourceTree = "<group>"; };
+		8E0C27CA1E28884A0067C7E0 /* LXViewSelectorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXViewSelectorController.m; sourceTree = "<group>"; };
+		8E0CCA3F1E25CD41009501D5 /* DDOrderListAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDOrderListAdView.h; sourceTree = "<group>"; };
+		8E0CCA401E25CD41009501D5 /* DDOrderListAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDOrderListAdView.m; sourceTree = "<group>"; };
+		8E2B45F11E24D6B2007F51DB /* Date_testVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Date_testVC.h; sourceTree = "<group>"; };
+		8E2B45F21E24D6B2007F51DB /* Date_testVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Date_testVC.m; sourceTree = "<group>"; };
+		8E2B45F41E24E765007F51DB /* OrderListAdManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderListAdManager.h; sourceTree = "<group>"; };
+		8E2B45F51E24E765007F51DB /* OrderListAdManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderListAdManager.m; sourceTree = "<group>"; };
 		8E6A3BAC1E1CC9F700CDFF7E /* MyTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E6A3BB01E1CC9F700CDFF7E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8E6A3BB21E1CC9F700CDFF7E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -368,6 +408,91 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8E0C27A61E287E9D0067C7E0 /* 波浪&下拉模糊效果 */ = {
+			isa = PBXGroup;
+			children = (
+				8E0C27A71E287E9D0067C7E0 /* beijing.png */,
+				8E0C27A81E287E9D0067C7E0 /* beijing@2x.png */,
+				8E0C27A91E287E9D0067C7E0 /* Classes */,
+				8E0C27AF1E287EC20067C7E0 /* Wave&DropDown.h */,
+				8E0C27B01E287EC20067C7E0 /* Wave&DropDown.m */,
+			);
+			path = "波浪&下拉模糊效果";
+			sourceTree = "<group>";
+		};
+		8E0C27A91E287E9D0067C7E0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8E0C27AA1E287E9D0067C7E0 /* JSWave.h */,
+				8E0C27AB1E287E9D0067C7E0 /* JSWave.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		8E0C27B21E287F390067C7E0 /* SystemActions */ = {
+			isa = PBXGroup;
+			children = (
+				8E0C27B31E287F520067C7E0 /* SystemActions_test.h */,
+				8E0C27B41E287F520067C7E0 /* SystemActions_test.m */,
+			);
+			path = SystemActions;
+			sourceTree = "<group>";
+		};
+		8E0C27B61E2885D10067C7E0 /* CustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				8E0C27BA1E2885FA0067C7E0 /* CustomButton_test.h */,
+				8E0C27BB1E2885FA0067C7E0 /* CustomButton_test.m */,
+				8E0C27B71E2885D10067C7E0 /* GXCustomButton.h */,
+				8E0C27B81E2885D10067C7E0 /* GXCustomButton.m */,
+			);
+			path = CustomButton;
+			sourceTree = "<group>";
+		};
+		8E0C27BD1E2887570067C7E0 /* SliderView */ = {
+			isa = PBXGroup;
+			children = (
+				8E0C27C81E28884A0067C7E0 /* LXViewSelectorController */,
+				8E0C27BE1E2887570067C7E0 /* Views */,
+				8E0C27C51E2887780067C7E0 /* Slider_testVC.h */,
+				8E0C27C61E2887780067C7E0 /* Slider_testVC.m */,
+			);
+			path = SliderView;
+			sourceTree = "<group>";
+		};
+		8E0C27BE1E2887570067C7E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8E0C27BF1E2887570067C7E0 /* GXScrollView.h */,
+				8E0C27C01E2887570067C7E0 /* GXScrollView.m */,
+				8E0C27C11E2887570067C7E0 /* GXSlideBtn.h */,
+				8E0C27C21E2887570067C7E0 /* GXSlideBtn.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8E0C27C81E28884A0067C7E0 /* LXViewSelectorController */ = {
+			isa = PBXGroup;
+			children = (
+				8E0C27C91E28884A0067C7E0 /* LXViewSelectorController.h */,
+				8E0C27CA1E28884A0067C7E0 /* LXViewSelectorController.m */,
+			);
+			path = LXViewSelectorController;
+			sourceTree = "<group>";
+		};
+		8E2B45F01E24D69D007F51DB /* Date_test */ = {
+			isa = PBXGroup;
+			children = (
+				8E2B45F11E24D6B2007F51DB /* Date_testVC.h */,
+				8E2B45F21E24D6B2007F51DB /* Date_testVC.m */,
+				8E0CCA3F1E25CD41009501D5 /* DDOrderListAdView.h */,
+				8E0CCA401E25CD41009501D5 /* DDOrderListAdView.m */,
+				8E2B45F41E24E765007F51DB /* OrderListAdManager.h */,
+				8E2B45F51E24E765007F51DB /* OrderListAdManager.m */,
+			);
+			path = Date_test;
+			sourceTree = "<group>";
+		};
 		8E6A3BA31E1CC9F700CDFF7E = {
 			isa = PBXGroup;
 			children = (
@@ -438,6 +563,11 @@
 		8E6A3BE21E1CD90400CDFF7E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8E0C27BD1E2887570067C7E0 /* SliderView */,
+				8E0C27B61E2885D10067C7E0 /* CustomButton */,
+				8E0C27B21E287F390067C7E0 /* SystemActions */,
+				8E0C27A61E287E9D0067C7E0 /* 波浪&下拉模糊效果 */,
+				8E2B45F01E24D69D007F51DB /* Date_test */,
 				8EFF588D1E23C0DE00CCAB33 /* Masonry */,
 				8EFF589C1E23C0DE00CCAB33 /* StackView */,
 				8EFF58691E23AA2400CCAB33 /* PhotoPreview */,
@@ -1009,6 +1139,7 @@
 				8EFF58811E23AA2400CCAB33 /* 3.jpg in Resources */,
 				8EFF584B1E23748F00CCAB33 /* tach@2x.png in Resources */,
 				8EFF584A1E23748F00CCAB33 /* tach.png in Resources */,
+				8E0C27AC1E287E9D0067C7E0 /* beijing.png in Resources */,
 				8E6A3BBF1E1CC9F700CDFF7E /* LaunchScreen.storyboard in Resources */,
 				8EFF58C41E23C0DE00CCAB33 /* 222_3.jpg in Resources */,
 				8EFF587F1E23AA2400CCAB33 /* 1.jpg in Resources */,
@@ -1042,6 +1173,7 @@
 				8EFF58461E23748F00CCAB33 /* obama.png in Resources */,
 				8E6A3BBA1E1CC9F700CDFF7E /* Main.storyboard in Resources */,
 				8EFF58361E23748F00CCAB33 /* arrow-down.png in Resources */,
+				8E0C27AD1E287E9D0067C7E0 /* beijing@2x.png in Resources */,
 				8EFF58431E23748F00CCAB33 /* heart.png in Resources */,
 				8EFF58391E23748F00CCAB33 /* arrow-up.png in Resources */,
 				8EFF583E1E23748F00CCAB33 /* BatmanButton@2x.png in Resources */,
@@ -1209,6 +1341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EFF58311E23748F00CCAB33 /* PulseViewController.m in Sources */,
+				8E0C27B91E2885D10067C7E0 /* GXCustomButton.m in Sources */,
 				8EFF58301E23748F00CCAB33 /* PacmanViewController.m in Sources */,
 				8E7E1AA91E1FA8290084CE93 /* UILabel+Tools.m in Sources */,
 				8EFF57E61E23734900CCAB33 /* HoleGuideView.m in Sources */,
@@ -1216,7 +1349,12 @@
 				8EFF58B71E23C0DE00CCAB33 /* TestCell.m in Sources */,
 				8EFF57C01E23203800CCAB33 /* CaculatorController.m in Sources */,
 				8EFF58B41E23C0DE00CCAB33 /* EqualMarginController.m in Sources */,
+				8E0C27C71E2887780067C7E0 /* Slider_testVC.m in Sources */,
+				8E0C27B11E287EC20067C7E0 /* Wave&DropDown.m in Sources */,
+				8E0C27C41E2887570067C7E0 /* GXSlideBtn.m in Sources */,
 				8E6A3BEE1E1CD90400CDFF7E /* Quantz2D_VC.m in Sources */,
+				8E0C27BC1E2885FA0067C7E0 /* CustomButton_test.m in Sources */,
+				8E0C27AE1E287E9D0067C7E0 /* JSWave.m in Sources */,
 				8EFF57D71E2365F700CCAB33 /* SearchVC.m in Sources */,
 				8EFF58551E23748F00CCAB33 /* StickyNotesViewController.m in Sources */,
 				8EFF58321E23748F00CCAB33 /* ReflectionViewController.m in Sources */,
@@ -1225,15 +1363,19 @@
 				8EFF57D31E23648000CCAB33 /* UIView_Convert.m in Sources */,
 				8EFF58581E2374AB00CCAB33 /* CoreAnimation_test.m in Sources */,
 				8EFF57DB1E236F7100CCAB33 /* RegularExpressionVC.m in Sources */,
+				8E0C27CB1E28884A0067C7E0 /* LXViewSelectorController.m in Sources */,
 				8EFF58341E23748F00CCAB33 /* TachometerViewController.m in Sources */,
 				8EFF58D01E23C28200CCAB33 /* Masonry_test.m in Sources */,
 				8EFF58881E23AA2400CCAB33 /* AFAudioRouter.m in Sources */,
 				8EFF58BA1E23C0DE00CCAB33 /* DemoTwoController.m in Sources */,
 				8EFF58631E2377FC00CCAB33 /* GXActionSheetController.m in Sources */,
+				8E0C27B51E287F520067C7E0 /* SystemActions_test.m in Sources */,
+				8E0CCA411E25CD41009501D5 /* DDOrderListAdView.m in Sources */,
 				8EFF58B61E23C0DE00CCAB33 /* TableViewController.m in Sources */,
 				8EFF57C91E23210A00CCAB33 /* CityPickerVC.m in Sources */,
 				8EFF58641E2377FC00CCAB33 /* GXAlertView.m in Sources */,
 				8E6A3BB71E1CC9F700CDFF7E /* ViewController.m in Sources */,
+				8E2B45F31E24D6B2007F51DB /* Date_testVC.m in Sources */,
 				8EFF587D1E23AA2400CCAB33 /* iCarousel.m in Sources */,
 				8EFF582B1E23748F00CCAB33 /* BatmanViewController.m in Sources */,
 				8EFF582D1E23748F00CCAB33 /* ImplicitAnimationsViewController.m in Sources */,
@@ -1243,6 +1385,7 @@
 				8EFF582C1E23748F00CCAB33 /* CALayer+Additions.m in Sources */,
 				8E6A3BED1E1CD90400CDFF7E /* CoreImageVC.m in Sources */,
 				8E7E1AA81E1FA8290084CE93 /* NSDate+Utilities.m in Sources */,
+				8E0C27C31E2887570067C7E0 /* GXScrollView.m in Sources */,
 				8E7E1AA61E1FA8290084CE93 /* NSString+Tools.m in Sources */,
 				8EFF58CD1E23C0FC00CCAB33 /* StackView_test.m in Sources */,
 				8EFF58651E2377FC00CCAB33 /* GXNotifyView.m in Sources */,
@@ -1258,6 +1401,7 @@
 				8EFF58541E23748F00CCAB33 /* SimpleViewPropertyAnimation.m in Sources */,
 				8EFF58681E23780E00CCAB33 /* Alert_test.m in Sources */,
 				8EFF582E1E23748F00CCAB33 /* MakeItStickViewController.m in Sources */,
+				8E2B45F61E24E765007F51DB /* OrderListAdManager.m in Sources */,
 				8EFF588C1E23AA4500CCAB33 /* PhotosPreviewVC.m in Sources */,
 				8EFF57C61E2320A900CCAB33 /* CityPickerView.m in Sources */,
 				8EFF58B31E23C0DE00CCAB33 /* BestSelectModel.m in Sources */,
