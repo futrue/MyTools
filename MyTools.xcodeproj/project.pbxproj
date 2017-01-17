@@ -22,6 +22,14 @@
 		8E0CCA411E25CD41009501D5 /* DDOrderListAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CCA401E25CD41009501D5 /* DDOrderListAdView.m */; };
 		8E2B45F31E24D6B2007F51DB /* Date_testVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2B45F21E24D6B2007F51DB /* Date_testVC.m */; };
 		8E2B45F61E24E765007F51DB /* OrderListAdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2B45F51E24E765007F51DB /* OrderListAdManager.m */; };
+		8E3C3A961E2DAED20083DB33 /* YHDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C3A941E2DAED20083DB33 /* YHDropDownMenu.m */; };
+		8E3C3A971E2DAED20083DB33 /* 矩形-5@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E3C3A951E2DAED20083DB33 /* 矩形-5@3x.png */; };
+		8E3C3A9A1E2DAEEA0083DB33 /* DropDownMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C3A991E2DAEEA0083DB33 /* DropDownMenuVC.m */; };
+		8E3C3AA21E2DAFD20083DB33 /* bg_tk_003.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E3C3A9D1E2DAFD20083DB33 /* bg_tk_003.png */; };
+		8E3C3AA31E2DAFD20083DB33 /* LHWaterWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C3A9F1E2DAFD20083DB33 /* LHWaterWaveView.m */; };
+		8E3C3AA41E2DAFD20083DB33 /* LHWaveProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C3AA11E2DAFD20083DB33 /* LHWaveProgressView.m */; };
+		8E3C3AA71E2DAFF00083DB33 /* WaterWaveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C3AA61E2DAFF00083DB33 /* WaterWaveVC.m */; };
+		8E3C3AA91E2DB22B0083DB33 /* iOS应用提交 App Store 上架被拒的原因都有哪些？.docx in Resources */ = {isa = PBXBuildFile; fileRef = 8E3C3AA81E2DB22B0083DB33 /* iOS应用提交 App Store 上架被拒的原因都有哪些？.docx */; };
 		8E6A3BB11E1CC9F700CDFF7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6A3BB01E1CC9F700CDFF7E /* main.m */; };
 		8E6A3BB41E1CC9F700CDFF7E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6A3BB31E1CC9F700CDFF7E /* AppDelegate.m */; };
 		8E6A3BB71E1CC9F700CDFF7E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6A3BB61E1CC9F700CDFF7E /* ViewController.m */; };
@@ -187,6 +195,19 @@
 		8E2B45F21E24D6B2007F51DB /* Date_testVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Date_testVC.m; sourceTree = "<group>"; };
 		8E2B45F41E24E765007F51DB /* OrderListAdManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderListAdManager.h; sourceTree = "<group>"; };
 		8E2B45F51E24E765007F51DB /* OrderListAdManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderListAdManager.m; sourceTree = "<group>"; };
+		8E3C3A931E2DAED20083DB33 /* YHDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDropDownMenu.h; sourceTree = "<group>"; };
+		8E3C3A941E2DAED20083DB33 /* YHDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHDropDownMenu.m; sourceTree = "<group>"; };
+		8E3C3A951E2DAED20083DB33 /* 矩形-5@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "矩形-5@3x.png"; sourceTree = "<group>"; };
+		8E3C3A981E2DAEEA0083DB33 /* DropDownMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownMenuVC.h; sourceTree = "<group>"; };
+		8E3C3A991E2DAEEA0083DB33 /* DropDownMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownMenuVC.m; sourceTree = "<group>"; };
+		8E3C3A9D1E2DAFD20083DB33 /* bg_tk_003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_tk_003.png; sourceTree = "<group>"; };
+		8E3C3A9E1E2DAFD20083DB33 /* LHWaterWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHWaterWaveView.h; sourceTree = "<group>"; };
+		8E3C3A9F1E2DAFD20083DB33 /* LHWaterWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHWaterWaveView.m; sourceTree = "<group>"; };
+		8E3C3AA01E2DAFD20083DB33 /* LHWaveProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHWaveProgressView.h; sourceTree = "<group>"; };
+		8E3C3AA11E2DAFD20083DB33 /* LHWaveProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHWaveProgressView.m; sourceTree = "<group>"; };
+		8E3C3AA51E2DAFF00083DB33 /* WaterWaveVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterWaveVC.h; sourceTree = "<group>"; };
+		8E3C3AA61E2DAFF00083DB33 /* WaterWaveVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterWaveVC.m; sourceTree = "<group>"; };
+		8E3C3AA81E2DB22B0083DB33 /* iOS应用提交 App Store 上架被拒的原因都有哪些？.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iOS应用提交 App Store 上架被拒的原因都有哪些？.docx"; sourceTree = "<group>"; };
 		8E6A3BAC1E1CC9F700CDFF7E /* MyTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E6A3BB01E1CC9F700CDFF7E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8E6A3BB21E1CC9F700CDFF7E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -493,6 +514,48 @@
 			path = Date_test;
 			sourceTree = "<group>";
 		};
+		8E3C3A911E2DAED20083DB33 /* DropdownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				8E3C3A921E2DAED20083DB33 /* YHDropDownMenu */,
+				8E3C3A981E2DAEEA0083DB33 /* DropDownMenuVC.h */,
+				8E3C3A991E2DAEEA0083DB33 /* DropDownMenuVC.m */,
+			);
+			path = DropdownMenu;
+			sourceTree = "<group>";
+		};
+		8E3C3A921E2DAED20083DB33 /* YHDropDownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				8E3C3A931E2DAED20083DB33 /* YHDropDownMenu.h */,
+				8E3C3A941E2DAED20083DB33 /* YHDropDownMenu.m */,
+				8E3C3A951E2DAED20083DB33 /* 矩形-5@3x.png */,
+			);
+			path = YHDropDownMenu;
+			sourceTree = "<group>";
+		};
+		8E3C3A9B1E2DAFD20083DB33 /* WaterWave */ = {
+			isa = PBXGroup;
+			children = (
+				8E3C3A9C1E2DAFD20083DB33 /* LHWaveView */,
+				8E3C3AA51E2DAFF00083DB33 /* WaterWaveVC.h */,
+				8E3C3AA61E2DAFF00083DB33 /* WaterWaveVC.m */,
+			);
+			path = WaterWave;
+			sourceTree = "<group>";
+		};
+		8E3C3A9C1E2DAFD20083DB33 /* LHWaveView */ = {
+			isa = PBXGroup;
+			children = (
+				8E3C3A9D1E2DAFD20083DB33 /* bg_tk_003.png */,
+				8E3C3A9E1E2DAFD20083DB33 /* LHWaterWaveView.h */,
+				8E3C3A9F1E2DAFD20083DB33 /* LHWaterWaveView.m */,
+				8E3C3AA01E2DAFD20083DB33 /* LHWaveProgressView.h */,
+				8E3C3AA11E2DAFD20083DB33 /* LHWaveProgressView.m */,
+			);
+			path = LHWaveView;
+			sourceTree = "<group>";
+		};
 		8E6A3BA31E1CC9F700CDFF7E = {
 			isa = PBXGroup;
 			children = (
@@ -537,6 +600,7 @@
 			isa = PBXGroup;
 			children = (
 				8E6A3BB01E1CC9F700CDFF7E /* main.m */,
+				8E3C3AA81E2DB22B0083DB33 /* iOS应用提交 App Store 上架被拒的原因都有哪些？.docx */,
 				8EFF57CA1E2321E800CCAB33 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
@@ -563,6 +627,8 @@
 		8E6A3BE21E1CD90400CDFF7E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8E3C3A9B1E2DAFD20083DB33 /* WaterWave */,
+				8E3C3A911E2DAED20083DB33 /* DropdownMenu */,
 				8E0C27BD1E2887570067C7E0 /* SliderView */,
 				8E0C27B61E2885D10067C7E0 /* CustomButton */,
 				8E0C27B21E287F390067C7E0 /* SystemActions */,
@@ -1129,6 +1195,7 @@
 				8EFF58CA1E23C0DE00CCAB33 /* 222_9.jpg in Resources */,
 				8EFF58BF1E23C0DE00CCAB33 /* 222_13.jpg in Resources */,
 				8EFF583F1E23748F00CCAB33 /* BobMcCune.png in Resources */,
+				8E3C3AA21E2DAFD20083DB33 /* bg_tk_003.png in Resources */,
 				8EFF58801E23AA2400CCAB33 /* 2.jpg in Resources */,
 				8EFF58871E23AA2400CCAB33 /* 111.mp3 in Resources */,
 				8EFF58381E23748F00CCAB33 /* arrow-right.png in Resources */,
@@ -1150,6 +1217,7 @@
 				8EFF58C51E23C0DE00CCAB33 /* 222_4.jpg in Resources */,
 				8EFF58C31E23C0DE00CCAB33 /* 222_2.jpg in Resources */,
 				8EFF58411E23748F00CCAB33 /* corkboard.png in Resources */,
+				8E3C3A971E2DAED20083DB33 /* 矩形-5@3x.png in Resources */,
 				8EFF58BB1E23C0DE00CCAB33 /* 222_1.jpg in Resources */,
 				8EFF58BD1E23C0DE00CCAB33 /* 222_11.jpg in Resources */,
 				8EFF58481E23748F00CCAB33 /* pin.png in Resources */,
@@ -1167,6 +1235,7 @@
 				8EFF58C11E23C0DE00CCAB33 /* 222_15.jpg in Resources */,
 				8EFF58831E23AA2400CCAB33 /* 5.jpg in Resources */,
 				8EFF58451E23748F00CCAB33 /* new_note_icon.png in Resources */,
+				8E3C3AA91E2DB22B0083DB33 /* iOS应用提交 App Store 上架被拒的原因都有哪些？.docx in Resources */,
 				8EFF58C91E23C0DE00CCAB33 /* 222_8.jpg in Resources */,
 				8EFF58441E23748F00CCAB33 /* mountains.png in Resources */,
 				8EFF58C61E23C0DE00CCAB33 /* 222_5.jpg in Resources */,
@@ -1352,10 +1421,12 @@
 				8E0C27C71E2887780067C7E0 /* Slider_testVC.m in Sources */,
 				8E0C27B11E287EC20067C7E0 /* Wave&DropDown.m in Sources */,
 				8E0C27C41E2887570067C7E0 /* GXSlideBtn.m in Sources */,
+				8E3C3A961E2DAED20083DB33 /* YHDropDownMenu.m in Sources */,
 				8E6A3BEE1E1CD90400CDFF7E /* Quantz2D_VC.m in Sources */,
 				8E0C27BC1E2885FA0067C7E0 /* CustomButton_test.m in Sources */,
 				8E0C27AE1E287E9D0067C7E0 /* JSWave.m in Sources */,
 				8EFF57D71E2365F700CCAB33 /* SearchVC.m in Sources */,
+				8E3C3A9A1E2DAEEA0083DB33 /* DropDownMenuVC.m in Sources */,
 				8EFF58551E23748F00CCAB33 /* StickyNotesViewController.m in Sources */,
 				8EFF58321E23748F00CCAB33 /* ReflectionViewController.m in Sources */,
 				8EFF58521E23748F00CCAB33 /* FlipViewController.m in Sources */,
@@ -1379,6 +1450,7 @@
 				8EFF587D1E23AA2400CCAB33 /* iCarousel.m in Sources */,
 				8EFF582B1E23748F00CCAB33 /* BatmanViewController.m in Sources */,
 				8EFF582D1E23748F00CCAB33 /* ImplicitAnimationsViewController.m in Sources */,
+				8E3C3AA31E2DAFD20083DB33 /* LHWaterWaveView.m in Sources */,
 				8EFF57DF1E23721100CCAB33 /* RandomFllowersVC.m in Sources */,
 				8EFF57CF1E2322C300CCAB33 /* CollectionView_test.m in Sources */,
 				8EFF58531E23748F00CCAB33 /* NoteView.m in Sources */,
@@ -1400,9 +1472,11 @@
 				8EFF58331E23748F00CCAB33 /* SublayerTransformViewController.m in Sources */,
 				8EFF58541E23748F00CCAB33 /* SimpleViewPropertyAnimation.m in Sources */,
 				8EFF58681E23780E00CCAB33 /* Alert_test.m in Sources */,
+				8E3C3AA41E2DAFD20083DB33 /* LHWaveProgressView.m in Sources */,
 				8EFF582E1E23748F00CCAB33 /* MakeItStickViewController.m in Sources */,
 				8E2B45F61E24E765007F51DB /* OrderListAdManager.m in Sources */,
 				8EFF588C1E23AA4500CCAB33 /* PhotosPreviewVC.m in Sources */,
+				8E3C3AA71E2DAFF00083DB33 /* WaterWaveVC.m in Sources */,
 				8EFF57C61E2320A900CCAB33 /* CityPickerView.m in Sources */,
 				8EFF58B31E23C0DE00CCAB33 /* BestSelectModel.m in Sources */,
 				8EFF58891E23AA2400CCAB33 /* AFSoundManager.m in Sources */,

@@ -31,6 +31,7 @@
     [self.view addSubview:self.scrollView];
     
     [self gotoType2];
+    
 }
 
 - (NSArray *)titleArray {
