@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>SQL SELECT 指令</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="这一页介绍 SQL 中的 SELECT FROM 指令。">
+<meta name="keywords" content="sql select, from, http://www.1keydata.com/cn/sql/sql-select.php">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+<link rel="canonical" href="http://www.1keydata.com/cn/sql/sql-select.php" />
+<link rel=stylesheet type="text/css" href="sql.css">
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="ie8.css" />
+<![endif]-->
+<link rel="alternate" hreflang="en" href="http://www.1keydata.com/sql/sqlselect.html" />
+<link rel="alternate" hreflang="zh-TW" href="http://www.1keydata.com/tw/sql/sqlselect.html" />
+<link rel="alternate" hreflang="de" href="http://www.1keydata.com/de/sql/sql-select.php" />
+<link rel="alternate" hreflang="fr" href="http://www.1keydata.com/fr/sql/sql-select.php" />
+<link rel="alternate" hreflang="es" href="http://www.1keydata.com/es/sql/sql-select.php" />
+<link rel="alternate" hreflang="pt" href="http://www.1keydata.com/pt/sql/sql-select.php" />
+<link rel="alternate" hreflang="it" href="http://www.1keydata.com/it/sql/sql-select.php" />
+<link rel="alternate" hreflang="nl" href="http://www.1keydata.com/nl/sql/sql-select.php" />
+<link rel="alternate" hreflang="ja" href="http://www.1keydata.com/jp/sql/sql-select.php" />
+<link rel="alternate" hreflang="ko" href="http://www.1keydata.com/kr/sql/sql-select.php" />
+<link rel="alternate" hreflang="zh-CN" href="http://www.1keydata.com/cn/sql/sql-select.php" />
+</head>
+
+<body>
+<center>
+<table border=0 bgcolor="FF0000" class="main" cellspacing="0" cellpadding="0"><tr><td></td><td><h1>SQL Select</h1>
+</td></tr><tr><td class="search-box"></td>
+<td colspan=2><div class="n-wrap">
+<div class="n1"><a href="http://www.1keydata.com/cn/sql/">SQL语句教程</a></div>
+<div class="n2h"><a href="http://www.1keydata.com/cn/sql/sql-select.php">SQL指令</a></div>
+<div class="n3"><a href="http://www.1keydata.com/cn/sql/sql-create.php">表格处理</a></div>
+<div class="n4"><a href="http://www.1keydata.com/cn/sql/sql-syntax.php">SQL语法</a></div>
+</div></td></tr></table>
+<div id="colwrap">
+<div id="col2">
+<div id="col2n">
+
+﻿<br><center>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- SQL CN Responsive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4254904157393454"
+     data-ad-slot="5912164023"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</center><table border=0 cellspacing=10 class=main><tr><td>
+
+<p>SQL是用来做什么的呢？一个最常用的方式是将资料从数据库中的表格内选出。从这一句回答中，我们马上可以看到两个关键字： <b>从 (FROM)</b> 数据库中的表格内 <b>选出 (SELECT)</b>。(表格是一个数据库内的结构，它的目的是储存资料。在 <b><a href="http://www.1keydata.com/cn/sql/sql-create.php">表格处理</a></b>这一部分中，我们会提到如何使用 SQL 来设定表格。) 我们由这里可以看到最基本的 SQL 架构：
+
+<p><div class=box><font color=green><b>SELECT "栏位名" FROM "表格名";</b></font></div>
+
+<p>我们用以下的例子来看看实际上是怎么用的。假设我们有以下这个表格： 
+
+<p>
+<i><b>Store_Information</i></b> 表格<br>
+<table class=content border="1" cellpadding=2 cellspacing=0>
+<tr class=header><td>Store_Name</td><td>Sales</td><td>Txn_Date</td></tr>
+<tr><td>Los Angeles</td><td align=right>1500</td><td>05-Jan-1999</td></tr>
+<tr><td>San Diego</td><td align=right>250</td><td>07-Jan-1999</td></tr>
+<tr><td>Los Angeles</td><td align=right>300</td><td>08-Jan-1999</td></tr>
+<tr><td>Boston</td><td align=right>700</td><td>08-Jan-1999</td></tr>
+</table>
+
+<p>若要选出所有的店名 (Store_Name)，我们就打入： 
+
+<p><div class=box><font color=blue><b>SELECT Store_Name FROM Store_Information;</b></font></div>
+
+<p>结果:
+
+<p><div class=box><table border=0 class=result>
+<tr><td><u>Store_Name</u></td></tr>
+<tr><td>Los Angeles</td></tr>
+<tr><td>San Diego</td></tr>
+<tr><td>Los Angeles</td></tr>
+<tr><td>Boston</td></tr>
+</table></div>
+
+<p>我们一次可以读取好几个栏位，也可以同时由好几个表格中选资料。 
+
+<br><br>
+
+<center>
+<b><a href="http://www.1keydata.com/cn/sql/sql-distinct.php">SQL DISTINCT</a> &gt;&gt; </b>
+<br />
+﻿<center>
+<!-- SQL CN Responsive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4254904157393454"
+     data-ad-slot="5912164023"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</center><br>
+<hr>
+<p><center>Copyright &copy; 2015 &nbsp; <a href="http://www.1keydata.com/">1keydata.com</a> &nbsp; All Rights Reserved.</center></p>
+</td></tr></table>
+</div>
+</div>
+<div id="col1">
+<br><br>
+<div id="left-nav">
+<ul>
+<li><a href="http://www.1keydata.com/cn/sql/sql-select.php">SQL SELECT</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-distinct.php">SQL DISTINCT</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-where.php">SQL WHERE</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-and-or.php">SQL AND OR</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-in.php">SQL IN</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-between.php">SQL BETWEEN</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-like.php">SQL LIKE</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-orderby.php">SQL ORDER BY</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-functions.php">SQL 函数</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-count.php">SQL COUNT</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-groupby.php">SQL GROUP BY</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-having.php">SQL HAVING</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-alias.php">SQL ALIAS</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-joins.php">SQL 表格连接</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-outerjoin.php">SQL 外部连接</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-subquery.php">SQL Subquery</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-union.php">SQL UNION</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-unionall.php">SQL UNION ALL</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-intersect.php">SQL INTERSECT</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-minus.php">SQL MINUS</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-concatenate.php">SQL CONCATENATE</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-substring.php">SQL SUBSTRING</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-trim.php">SQL TRIM</a></li>
+<li> &nbsp; </li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-create.php">SQL CREATE TABLE</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-create-view.php">SQL CREATE VIEW<br>
+<li><a href="http://www.1keydata.com/cn/sql/sql-create-index.php">SQL CREATE INDEX<br>
+<li><a href="http://www.1keydata.com/cn/sql/sql-alter-table.php">SQL ALTER TABLE<br>
+<li><a href="http://www.1keydata.com/cn/sql/sql-primary-key.php">SQL 主键<br>
+<li><a href="http://www.1keydata.com/cn/sql/sql-foreign-key.php">SQL 外来键<br>
+<li><a href="http://www.1keydata.com/cn/sql/sql-drop.php">SQL DROP TABLE</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-truncate.php">SQL TRUNCATE TABLE</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-insert.php">SQL INSERT INTO</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-update.php">SQL UPDATE</a></li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-delete.php">SQL DELETE FROM</a></li><br>
+<li> &nbsp; </li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-sitemap.php">网站导引</a>
+<li> &nbsp; </li>
+<li><a href="http://www.1keydata.com/cn/sql/sql-links.php">SQL资源</a>
+<br><br>
+</ul>
+</div></center>
+﻿<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-484268-2', '1keydata.com');
+  ga('send', 'pageview');
+
+</script></body>
+
+</html>
+
+
+ 

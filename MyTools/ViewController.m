@@ -18,6 +18,7 @@
 #import "RandomFllowersVC.h"
 #import "HoleGuide_test.h"
 #import "CoreAnimation_test.h"
+#import "CAAnimation_test.h"
 #import "Alert_test.h"
 #import "PhotosPreviewVC.h"
 #import "YYLabel_testVC.h"
@@ -29,7 +30,10 @@
 #import "CustomButton_test.h"
 #import "Slider_testVC.h"
 #import "DropDownMenuVC.h"
+#import "DropDownMenuVC2.h"
 #import "WaterWaveVC.h"
+#import "SQLite_test.h"
+#import "Contact_test.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -60,6 +64,7 @@
     NSMutableArray *arr2 = [NSMutableArray array];
     [arr2 addObject:NSStringFromClass([PhotosPreviewVC class])];
     [arr2 addObject:NSStringFromClass([CoreAnimation_test class])];
+    [arr2 addObject:NSStringFromClass([CAAnimation_test class])];
     [arr2 addObject:NSStringFromClass([Alert_test class])];
     [arr2 addObject:NSStringFromClass([YYLabel_testVC class])];
     [arr2 addObject:NSStringFromClass([StackView_test class])];
@@ -67,13 +72,16 @@
     [arr2 addObject:NSStringFromClass([Date_testVC class])];
     [arr2 addObject:NSStringFromClass([Wave_DropDown class])];
     [arr2 addObject:NSStringFromClass([SystemActions_test class])];
-    [arr2 addObject:NSStringFromClass([CustomButton_test class])];
     [self.dataSource addObject:arr2];
     
     NSMutableArray *arr3 = [NSMutableArray array];
     [arr3 addObject:NSStringFromClass([Slider_testVC class])];
     [arr3 addObject:NSStringFromClass([DropDownMenuVC class])];
+    [arr3 addObject:NSStringFromClass([DropDownMenuVC2 class])];
     [arr3 addObject:NSStringFromClass([WaterWaveVC class])];
+    [arr3 addObject:NSStringFromClass([SQLite_test class])];
+    [arr3 addObject:NSStringFromClass([CustomButton_test class])];
+    [arr3 addObject:NSStringFromClass([Contact_test class])];
 
     
     [self.dataSource addObject:arr3];
