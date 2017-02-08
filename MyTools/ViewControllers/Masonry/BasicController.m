@@ -24,7 +24,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     
-//    [self test1];
+    [self test1];
 
     [self test2];
     

@@ -22,10 +22,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     self.scrollView = [[GXScrollView alloc] init];
     self.scrollView.itemViews = self.subViews;
     self.scrollView.titleArray = self.titleArray;
-    self.scrollView.frame = CGRectMake(0, 130, SCREEN_WIDTH, 300);
+    self.scrollView.frame = CGRectMake(0, 100, SCREEN_WIDTH, 300);
     self.scrollView.selectedIndex = 2;
     self.scrollView.midSpace = 50;
     [self.view addSubview:self.scrollView];

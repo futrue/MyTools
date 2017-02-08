@@ -30,6 +30,7 @@ static NSString *collectionViewFooterID = @"footer";
 }
 
 - (void)setupUI {
+    self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = BgColor;
     self.navigationItem.title = @"商品分类";
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
@@ -43,7 +44,7 @@ static NSString *collectionViewFooterID = @"footer";
 
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc ] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH/4, SCREEN_HEIGHT) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc ] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH/4, SCREEN_HEIGHT) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.scrollEnabled = NO;
@@ -59,7 +60,7 @@ static NSString *collectionViewFooterID = @"footer";
         layout.minimumInteritemSpacing = 2;// 列间距
         CGFloat w = self.view.frame.size.width/4.0 - 4;
         layout.itemSize = CGSizeMake(w, w);
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4, 0, SCREEN_WIDTH*3/4, SCREEN_HEIGHT) collectionViewLayout:layout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4, 64, SCREEN_WIDTH*3/4, SCREEN_HEIGHT-64) collectionViewLayout:layout];
         _collectionView.backgroundColor = [UIColor grayColor];
         [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:collectionViewID];
         [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:collectionViewHeaderID];
@@ -209,4 +210,44 @@ static NSString *collectionViewFooterID = @"footer";
     self.isRelated = YES;
 }
 
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSArray *array =  tableView.indexPathsForVisibleRows;
+    NSIndexPath *firstIndexPath = array[0];
+    
+    //设置anchorPoint
+    cell.layer.anchorPoint = CGPointMake(0, 0.5);
+    //为了防止cell视图移动，重新把cell放回原来的位置
+    cell.layer.position = CGPointMake(0, cell.layer.position.y);
+    
+    //设置cell 按照z轴旋转90度，注意是弧度
+    if (firstIndexPath.row < indexPath.row) {
+        cell.layer.transform = CATransform3DMakeRotation(M_PI_2, 0, 0, 1.0);
+    }else{
+        cell.layer.transform = CATransform3DMakeRotation(- M_PI_2, 0, 0, 1.0);
+    }
+    
+    cell.alpha = 0.0;
+    
+    [UIView animateWithDuration:1 animations:^{
+        cell.layer.transform = CATransform3DIdentity;
+        cell.alpha = 1.0;
+    }];
+}
+
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.row % 2 != 0) {
+        cell.transform = CGAffineTransformTranslate(cell.transform, kScreenWidth/2, 0);
+    }else{
+        cell.transform = CGAffineTransformTranslate(cell.transform, -kScreenWidth/2, 0);
+    }
+    cell.alpha = 0.0;
+    [UIView animateWithDuration:0.7 animations:^{
+        cell.transform = CGAffineTransformIdentity;
+        cell.alpha = 1.0;
+    } completion:^(BOOL finished) {
+        
+    }];
+}
 @end

@@ -8,8 +8,8 @@
 
 #import "GXActionSheetController.h"
 
-#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
-#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+//#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+//#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
 
 #define XRGB(r,g,b) [UIColor colorWithRed:(0x##r)/255.0 green:(0x##g)/255.0 blue:(0x##b)/255.0 alpha:1]
 #define XRGBA(r,g,b,a) [UIColor colorWithRed:(0x##r)/255.0 green:(0x##g)/255.0 blue:(0x##b)/255.0 alpha:(a)]

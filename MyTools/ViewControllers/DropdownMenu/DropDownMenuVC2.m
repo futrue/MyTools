@@ -63,7 +63,7 @@
 
 -(NSInteger)defaultShowSection:(NSInteger)section
 {
-    return 0;
+    return 1;
 }
 
 @end

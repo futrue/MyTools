@@ -7,7 +7,7 @@
 //
 
 #import "DropDownListView.h"
-#define DEGREES_TO_RADIANS(angle) ((angle)/180.0 *M_PI)
+//#define DEGREES_TO_RADIANS(angle) ((angle)/180.0 *M_PI)
 #define RADIANS_TO_DEGREES(radians) ((radians)*(180.0/M_PI))
 
 static NSInteger rowInSection;
@@ -65,7 +65,7 @@ static NSInteger rowInSection;
             
             if (i<sectionNum && i != 0) {
                 UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(sectionWidth*i, frame.size.height/4, 1, frame.size.height/2)];
-                lineView.backgroundColor = [UIColor lightGrayColor];
+                lineView.backgroundColor = [UIColor redColor];
                 [self addSubview:lineView];
             }
             

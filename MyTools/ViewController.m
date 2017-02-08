@@ -28,12 +28,15 @@
 #import "Wave&DropDown.h"
 #import "SystemActions_test.h"
 #import "CustomButton_test.h"
+#import "CustomButton_test2.h"
 #import "Slider_testVC.h"
 #import "DropDownMenuVC.h"
 #import "DropDownMenuVC2.h"
 #import "WaterWaveVC.h"
 #import "SQLite_test.h"
 #import "Contact_test.h"
+#import "LyricLabelVC.h"
+#import "RatingVC.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -81,11 +84,16 @@
     [arr3 addObject:NSStringFromClass([WaterWaveVC class])];
     [arr3 addObject:NSStringFromClass([SQLite_test class])];
     [arr3 addObject:NSStringFromClass([CustomButton_test class])];
+    [arr3 addObject:NSStringFromClass([CustomButton_test2 class])];
     [arr3 addObject:NSStringFromClass([Contact_test class])];
-
-    
+    [arr3 addObject:NSStringFromClass([LyricLabelVC class])];
+    [arr3 addObject:NSStringFromClass([RatingVC class])];
     [self.dataSource addObject:arr3];
-
+    
+    NSMutableArray *arr4 = [NSMutableArray array];
+    [arr4 addObject:NSStringFromClass([Slider_testVC class])];
+    [self.dataSource addObject:arr4];
+    
     [self.view addSubview:self.tableView];
     [self.tableView reloadData];
 }

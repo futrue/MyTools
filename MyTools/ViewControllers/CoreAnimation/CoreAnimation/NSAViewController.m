@@ -24,8 +24,8 @@
 
 #import "NSAViewController.h"
 
-static const CGFloat offset = 15.0;
-static const CGFloat curve = 3.0;
+static const CGFloat offset = 10.0;// 左下角和右下角y偏移量
+static const CGFloat curve = 5.0;// 中间凹部分的y偏移量
 
 @interface NSAViewController ()
 @property (strong, nonatomic) CALayer *layer;
@@ -66,8 +66,6 @@ static const CGFloat curve = 3.0;
 	self.view.backgroundColor = [UIColor whiteColor];
 	self.title = [[self class] displayName];
     
-    [self addInstructionLabel];
-	
 	UIImage *obamaImage = [UIImage imageNamed:@"obama"];
 	
 	self.layer = [CALayer layer];
@@ -82,23 +80,34 @@ static const CGFloat curve = 3.0;
 	self.layer.shadowOffset = CGSizeMake(0, 3);
 	self.layer.shadowOpacity = 0.80;
     self.layer.shadowRadius = 6.0f;
-    self.layer.shadowColor = [UIColor darkGrayColor].CGColor;
+    self.layer.shadowColor = [UIColor blackColor].CGColor;
 	
 	[self.view.layer addSublayer:self.layer];
 	
 	UIGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(togglePath)];
 	[self.view addGestureRecognizer:tapRecognizer];
+    
+//    [self test2];
 }
 
-- (void)addInstructionLabel {
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
-    label.text = @"Tap Image";
-    label.textColor = [UIColor blackColor];
-    [label sizeToFit];
+- (void)test2 {
+    UIImage *img = [UIImage imageNamed:@"backView"];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, img.size.width, img.size.height)];
+    view.center = self.view.center;
+    view.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin |
+    UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
+    view.layer.contents = (id)[UIImage imageNamed:@"backView"].CGImage;
+    view.layer.borderColor = [UIColor colorWithWhite:1.0 alpha:1.0].CGColor;
+//    view.layer.borderWidth = 2.0;
+    view.layer.shadowOffset = CGSizeMake(0, 3);
+    view.layer.shadowOpacity = 0.8;
+    view.layer.shouldRasterize = YES;
+    
+    UIBezierPath *path = [self bezierPathWithCurvedShadowForRect:view.bounds];
+    view.layer.shadowPath = path.CGPath;
+    
+    [self.view addSubview:view];
 
-    CGFloat x = (self.view.bounds.size.width - label.bounds.size.width) / 2;
-    label.frame = CGRectMake(x, 20, label.bounds.size.width, label.bounds.size.height);
-    [self.view addSubview:label];
 }
 
 - (void)togglePath {

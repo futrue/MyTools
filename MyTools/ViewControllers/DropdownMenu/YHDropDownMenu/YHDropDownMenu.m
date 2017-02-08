@@ -78,7 +78,7 @@
 - (UIColor *)menuBgColor
 {
     if (!_menuBgColor) {
-        _menuBgColor = [UIColor orangeColor];
+        _menuBgColor = [UIColor colorWithWhite:0.9 alpha:0.9];
     }
     return _menuBgColor;
 }
@@ -174,7 +174,7 @@
         
         //add bottom shadow
         UIView *bottomShadow = [[UIView alloc] initWithFrame:CGRectMake(0, self.frame.size.height-0.5, screenSize.width, 0.5)];
-        bottomShadow.backgroundColor = [UIColor lightGrayColor];
+        bottomShadow.backgroundColor = [UIColor redColor];
         [self addSubview:bottomShadow];
     }
     return self;

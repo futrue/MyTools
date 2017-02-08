@@ -24,8 +24,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = BgColor;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(openURL)];
-    
-    // Do any additional setup after loading the view.
+ 
+    [self openURL];
 }
 
 - (void)openURL {
