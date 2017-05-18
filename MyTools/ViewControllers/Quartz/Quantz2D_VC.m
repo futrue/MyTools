@@ -22,16 +22,43 @@
     self.view.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
     [self.view addSubview:self.view1];
     
+    UIImage *img1 = [UIView imageWithRoundedCornersSize:20 usingImage:TEST_IMG];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:img1];
+    CGFloat max = MIN(TEST_IMG.size.height, TEST_IMG.size.width);
+    imageView.size = CGSizeMake(max, max);
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    imageView.clipsToBounds = YES;
+    imageView.center = CGPointMake(self.view.center.x, self.view.center.y - 100);
+    [imageView addRoundedCorners:UIRectCornerBottomLeft|UIRectCornerBottomRight cornerRadius:10];
+//    [imageView clipsToRound];
+    [self.view addSubview:imageView];
+
+    UIImageView *imageView2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"images"]];
+    imageView2.size = CGSizeMake(100, 100);
+    imageView2.contentMode = UIViewContentModeScaleToFill;
+    imageView2.clipsToBounds = YES;
+    imageView2.center = CGPointMake(50, self.view.center.y + 150);
+
+    imageView2.layer.borderWidth = 5;
+    imageView2.layer.borderColor = COLOR_PRIMARY.CGColor;
+    imageView2.layer.cornerRadius = 50;
+
+//    [imageView2 setCornerRadius:50];
+//    [imageView2 clipsToRound];
+    [self.view addSubview:imageView2];
+
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"coreImage" style:UIBarButtonItemStyleDone target:self action:@selector(coreImage:)];
 
 }
+
+
 -(void)coreImage:(UIBarButtonItem *)btn{
     [self.navigationController pushViewController:[[CoreImageVC alloc] init] animated:YES];
 }
 
 - (QuartzView *)view1 {
     if(!_view1) {
-        _view1 = [[QuartzView alloc] initWithFrame:CGRectMake(10, 100, self.view.bounds.size.width - 20, 100)];
+        _view1 = [[QuartzView alloc] initWithFrame:CGRectMake(10, 64, self.view.bounds.size.width - 20, 40)];
         _view1.backgroundColor = [UIColor whiteColor];
     }
     return _view1;

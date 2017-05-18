@@ -13,6 +13,7 @@
 #import "GXNotifyView.h"
 
 #import "HYActivityView.h"
+#import "UIView+Tools.h"
 
 @interface Alert_test ()<GXAlertDelegate>
 @property (nonatomic, strong) UIButton *button;
@@ -32,12 +33,14 @@
     alert.backgroundColor = RandomColor;
     [alert addTarget:self action:@selector(systemAlert) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:alert];
+    [alert addBottomBorderWithColor:[UIColor redColor] andWidth:0.5];
     
     UIButton *sheet = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH / 2 + 60, 100, 80, 40)];
     [sheet setTitle:@"sheet" forState:UIControlStateNormal];
     sheet.backgroundColor = RandomColor;
     [sheet addTarget:self action:@selector(systemSheet) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:sheet];
+    [sheet addTopBorderWithColor:[UIColor redColor] andWidth:1];
 
     // 自定义弹窗
     NSArray *arr = @[@"alert",@"notifyView",@"actionSheet",@"HYActivityView"];

@@ -102,7 +102,10 @@
         _button.frame = CGRectMake(20, self.view.bounds.size.height - 80, 40, 40);
         _button.layer.cornerRadius = 4;
         _button.layer.masksToBounds = YES;
-        [_button setBackgroundImage:[UIImage imageNamed:@"images.jpeg"] forState:UIControlStateNormal];
+        UIImage *img = [UIView imageWithRoundedCornersSize:20 usingImage:[UIImage imageNamed:@"images.jpeg"]];
+
+        [_button setImage:img forState:UIControlStateNormal];
+//        [_button ClipSquareViewToRound];
         [_button addTarget:self action:@selector(change:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _button;
@@ -150,6 +153,8 @@
     if (!_slider) {
         _slider = [[UISlider alloc] initWithFrame:CGRectMake(100, self.view.bounds.size.height - 80, self.view.bounds.size.width - 200, 40)];
         _slider.backgroundColor = [UIColor colorWithWhite:0.9 alpha:0.9];
+        [_slider addRoundedCorners:UIRectCornerTopRight|UIRectCornerBottomRight cornerRadius:10];
+
         [_slider addTarget:self action:@selector(valueChange:) forControlEvents:UIControlEventValueChanged];
     }
     return _slider;
@@ -169,6 +174,7 @@
     if (!_inputView1) {
         _inputView1 = [[UIView alloc] initWithFrame:CGRectMake(10, self.view.bounds.size.height - 150, self.view.bounds.size.width - 20, 30)];
         _inputView1.backgroundColor = [UIColor redColor];
+        [_inputView1 clipsToRound];
         UILabel *label = [[UILabel alloc] init];
         label.text = @"";
     }
@@ -178,10 +184,13 @@
 - (UIView *)inputView2 {
     if (!_inputView2) {
         _inputView2 = [[UIView alloc] initWithFrame:CGRectMake((self.inputView1.center.x + self.view.bounds.size.width) - (self.view.bounds.size.width - 20)/2, self.view.bounds.size.height - 150, self.view.bounds.size.width - 20, 30)];
+        [_inputView2 setCornerRadius:8];
         _inputView2.backgroundColor = [UIColor yellowColor];
     }
     return _inputView2;
 }
+
+
 /*
 #pragma mark - Navigation
 

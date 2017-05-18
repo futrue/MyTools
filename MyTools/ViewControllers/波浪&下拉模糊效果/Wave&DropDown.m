@@ -149,7 +149,7 @@
     if(_iconImageview == nil) {
         
         _iconImageview = [[UIImageView alloc] init];
-        _iconImageview.image = [UIImage imageNamed:@"beijing"];
+        _iconImageview.image = [UIView imageWithRoundedCornersSize:10 usingImage:[UIImage imageNamed:@"beijing"]];
         _iconImageview.backgroundColor = [UIColor orangeColor];
         _iconImageview.userInteractionEnabled = YES;
         

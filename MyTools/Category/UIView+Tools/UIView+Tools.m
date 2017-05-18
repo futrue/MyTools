@@ -1,9 +1,9 @@
 //
-//  UIView+Tools.m
-//  shike
+//  UIImage+Tools.m
+//  MyTools
 //
-//  Created by Mango on 14/12/12.
-//  Copyright (c) 2014年 shixun. All rights reserved.
+//  Created by SGX on 17/2/9.
+//  Copyright © 2017年 Xing. All rights reserved.
 //
 
 #import "UIView+Tools.h"
@@ -13,14 +13,6 @@ static const void *BGTouchLongPressEndedViewBlockKey = &BGTouchLongPressEndedVie
 
 
 @implementation UIView (Tools)
-
-- (void)ClipSquareViewToRound
-{
-    if (self.frame.size.width == self.frame.size.height)
-    {
-        self.layer.cornerRadius = self.frame.size.width/2;
-    }
-}
 
 + (UIImage *)imageWithRoundedCornersSize:(float)cornerRadius usingImage:(UIImage *)original
 {
@@ -43,6 +35,45 @@ static const void *BGTouchLongPressEndedViewBlockKey = &BGTouchLongPressEndedVie
     UIGraphicsEndImageContext();
     
     return image;
+}
+
+/**
+ *  设置部分圆角(绝对布局)
+ *
+ *  @param corners 需要设置为圆角的角 UIRectCornerTopLeft | UIRectCornerTopRight | UIRectCornerBottomLeft | UIRectCornerBottomRight | UIRectCornerAllCorners
+ *  @param radii   需要设置的圆角大小 例如 CGSizeMake(20.0f, 20.0f)
+ */
+- (void)addRoundedCorners:(UIRectCorner)corners
+              cornerRadii:(CGSize)radii {
+    
+    UIBezierPath* rounded = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:corners cornerRadii:radii];
+    CAShapeLayer* shape = [[CAShapeLayer alloc] init];
+    [shape setPath:rounded.CGPath];
+    
+    self.layer.mask = shape;
+}
+
+/**
+ 设置部分圆角(相对布局)
+ 
+ @param corners  需要设置为圆角的角 UIRectCornerTopLeft | UIRectCornerTopRight | UIRectCornerBottomLeft | UIRectCornerBottomRight | UIRectCornerAllCorners
+ @param cornerRadius 需要设置的圆角弧度
+ */
+- (void)addRoundedCorners:(UIRectCorner)corners cornerRadius:(CGFloat)cornerRadius {
+    UIBezierPath* rounded = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:corners cornerRadii:CGSizeMake(cornerRadius, cornerRadius)];
+    CAShapeLayer* shape = [[CAShapeLayer alloc] init];
+    [shape setPath:rounded.CGPath];
+    
+    self.layer.mask = shape;
+}
+
+- (void)clipsToRound {
+    [self addRoundedCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(self.frame.size.width / 2, self.frame.size.height / 2)];
+    //    [self addRoundedCorners:UIRectCornerAllCorners cornerRadius:self.frame.size.width / 2];
+}
+
+- (void)setCornerRadius:(CGFloat)cornerRadius {
+    [self addRoundedCorners:UIRectCornerAllCorners cornerRadius:cornerRadius];
 }
 
 - (void)addTopBorderWithColor:(UIColor *)color andWidth:(CGFloat) borderWidth {
@@ -169,4 +200,36 @@ static const void *BGTouchLongPressEndedViewBlockKey = &BGTouchLongPressEndedVie
     UIGraphicsEndImageContext();
     return newImage;
 }
+
+#pragma mark - CGContext img
++ (UIImage *)imageNamed:(NSString *)name cornerRadius:(CGFloat)cornerRadius {
+    UIImage *originalImage = [UIImage imageNamed:name];
+    CGRect rect = CGRectMake(0, 0, originalImage.size.width, originalImage.size.height);
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, [UIScreen mainScreen].scale);
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(cornerRadius, cornerRadius)];
+    CGContextAddPath(UIGraphicsGetCurrentContext(), path.CGPath);
+    CGContextClip(UIGraphicsGetCurrentContext());
+    [originalImage drawInRect:rect];
+    CGContextDrawPath(UIGraphicsGetCurrentContext(), kCGPathFillStroke);
+    
+    UIImage *clipImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return clipImage;
+}
+
+#pragma mark - BezierPath img
+- (UIImage *)imageWithCornerRadius:(CGFloat)cornerRadius {
+    int w = self.size.width * self.scale;
+    int h = self.size.height * self.scale;
+    CGRect rect = CGRectMake(0, 0, w, h);
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(w, h), false, 1.0);
+    [[UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius] addClip];
+    [self drawInRect:rect];
+    
+    UIImage *ret = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return ret;
+}
+
+
 @end

@@ -43,7 +43,8 @@
 {
     LHWaveProgressView *waveProgressView = [[LHWaveProgressView alloc]initWithFrame:CGRectMake((CGRectGetWidth(self.view.frame) - 180)/2, 44, 180, 180)];
     waveProgressView.waveViewMargin = UIEdgeInsetsMake(15, 15, 20, 20);
-    waveProgressView.backgroundImageView.image = [UIImage imageNamed:@"bg_tk_003"];
+    UIImage *img= [UIView imageWithRoundedCornersSize:5 usingImage:[UIImage imageNamed:@"bg_tk_003"]];
+    waveProgressView.backgroundImageView.image = img;
     waveProgressView.numberLabel.text = @"80";
     waveProgressView.numberLabel.font = [UIFont boldSystemFontOfSize:70];
     waveProgressView.numberLabel.textColor = [UIColor whiteColor];
