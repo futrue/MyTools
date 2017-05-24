@@ -14,7 +14,6 @@
 @property (nonatomic, strong) NSMutableAttributedString *text;
 @property (nonatomic) YYTextDirection dotDirection;
 
-
 @end
 
 @implementation YYLabel_testVC
@@ -26,7 +25,7 @@
     //    self.text.underlineStyle = NSUnderlineStyleSingle;
     //    __weak typeof(self) weakSelf = self;
     {
-        NSMutableAttributedString *one = [[NSMutableAttributedString alloc] initWithString:@"Link"];
+        NSMutableAttributedString *one = [[NSMutableAttributedString alloc] initWithString:@"Linkvsfwef="];
         one.font = [UIFont boldSystemFontOfSize:24];
         //        one.underlineStyle = NSUnderlineStyleSingle;
         [one setTextHighlightRange:one.rangeOfAll
@@ -42,13 +41,23 @@
     
     self.yyLabel.attributedText = self.text;
     
+    
+    
     [self.view addSubview:self.label1];
     
     self.label1.attributedText = self.text;
+    
+    [self setup];
 }
 
 - (void)setup {
-    
+    UILabel *label = [[UILabel alloc] init];
+    label.backgroundColor = [UIColor grayColor];
+    label.text = @"aaaasdfghjkefqeqsadfl;";
+    label.textColor = [UIColor redColor];
+    label.center = self.view.center;
+    [label sizeToFit];
+    [self.view addSubview:label];
 }
 
 - (UILabel *)label1 {
