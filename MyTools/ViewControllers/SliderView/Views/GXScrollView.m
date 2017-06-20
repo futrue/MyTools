@@ -55,6 +55,11 @@
     }
 
 }
+- (void)setItemViews:(NSArray<UIView *> *)itemViews {
+    _itemViews = itemViews;
+    [self setNeedsDisplay];
+    [self layoutIfNeeded];
+}
 
 #pragma mark - <UISlideViewDelegate>
 - (void)slideViewDidSelectedIndex:(NSInteger)index {

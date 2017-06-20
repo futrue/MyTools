@@ -37,6 +37,11 @@
 #import "Contact_test.h"
 #import "LyricLabelVC.h"
 #import "RatingVC.h"
+#import "GroupNetwork_testVC.h"
+#import "Layoutsubviews_test.h"
+#import "TestViewController.h"
+#import "PopMenuVC.h"
+
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -52,6 +57,7 @@
     self.view.backgroundColor = BgColor;
     self.dataSource = [NSMutableArray array];
     NSMutableArray *arr = [NSMutableArray array];
+    [arr addObject:NSStringFromClass([TestViewController class])];
     [arr addObject:NSStringFromClass([Quantz2D_VC class])];
     [arr addObject:NSStringFromClass([VisualEffectVC class])];
     [arr addObject:NSStringFromClass([CaculatorController class])];
@@ -91,7 +97,9 @@
     [self.dataSource addObject:arr3];
     
     NSMutableArray *arr4 = [NSMutableArray array];
-    [arr4 addObject:NSStringFromClass([Slider_testVC class])];
+    [arr4 addObject:NSStringFromClass([GroupNetwork_testVC class])];
+    [arr4 addObject:NSStringFromClass([Layoutsubviews_test class])];
+    [arr4 addObject:NSStringFromClass([PopMenuVC class])];
     [self.dataSource addObject:arr4];
     
     [self.view addSubview:self.tableView];
