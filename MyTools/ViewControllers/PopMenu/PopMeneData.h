@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface PopMeneData : NSObject
-
++ (NSArray <NSDictionary *>*)dataSource;
 @end

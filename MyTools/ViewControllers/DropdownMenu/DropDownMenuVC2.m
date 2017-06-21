@@ -22,9 +22,9 @@
 {
     [super viewDidLoad];
     self.title = @"下拉列表";
-    chooseArray = [NSMutableArray arrayWithArray:@[
-                                                   @[@"洛龙区",@"西工区",@"老城区",@"涧西区",@"瀍河回族区",@"吉利区",@"伊滨区"],
-                                                   @[@"香蕉",@"葡萄",@"苹果",@"橘子",@"西红柿"],@[@"爸爸",@"妈妈",@"儿子",@"女儿",@"孙子",@"孙女"]
+    chooseArray = [NSMutableArray arrayWithArray:@[@[@"洛龙区",@"西工区",@"老城区",@"涧西区",@"瀍河回族区",@"吉利区",@"伊滨区"],
+                                                   @[@"香蕉",@"葡萄",@"苹果",@"橘子",@"西红柿"],
+                                                   @[@"爸爸",@"妈妈",@"儿子",@"女儿",@"孙子",@"孙女"]
                                                    ]];
     
     DropDownListView *dropDownView = [[DropDownListView alloc] initWithFrame:CGRectMake(0, 60, self.view.frame.size.width, 40) dataSource:self delegate:self];
