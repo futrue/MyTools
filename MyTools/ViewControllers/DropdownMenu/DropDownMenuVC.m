@@ -32,6 +32,10 @@
     self.genders = @[NSLocalizedString(@"gender1", @"gender1"),
                      NSLocalizedString(@"gender2", @"gender2"),
                      NSLocalizedString(@"gender3", @"gender3")];
+    NSInteger count = self.citys.count + self.ages.count + self.genders.count;
+    for (int i = 0; i < count; i++) {
+        
+    }
     self.originalArray = @[[NSString stringWithFormat:@"%@_%@_%@",self.citys[1],self.ages[1],self.genders[1]],
                            [NSString stringWithFormat:@"%@_%@_%@",self.citys[1],self.ages[1],self.genders[2]],
                            [NSString stringWithFormat:@"%@_%@_%@",self.citys[1],self.ages[2],self.genders[1]],

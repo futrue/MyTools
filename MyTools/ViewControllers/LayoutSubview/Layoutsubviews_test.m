@@ -104,7 +104,7 @@
 
 - (void)test_5
 {
-    _timer = [NSTimer scheduledTimerWithTimeInterval:1.f
+    _timer = [NSTimer scheduledTimerWithTimeInterval:2.f
                                               target:self
                                             selector:@selector(timerEvent:)
                                             userInfo:nil
@@ -113,7 +113,7 @@
     _largeView.backgroundColor = [UIColor grayColor];
     [self.view addSubview:_largeView];
     
-    _smallView = [[TestView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    _smallView = [[TestView alloc] init];
     _smallView.backgroundColor = [UIColor blueColor];
     [_largeView addSubview:_smallView];
 }

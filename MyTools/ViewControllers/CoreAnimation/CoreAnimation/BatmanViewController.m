@@ -33,13 +33,13 @@
 
 @implementation BatmanViewController
 
-- (id)init {
-    self = [super initWithNibName:@"BatmanView" bundle:nil];
-    if (self) {
-        self.edgesForExtendedLayout = UIRectEdgeNone;
-    }
-    return self;
-}
+//- (id)init {
+//    self = [super initWithNibName:@"BatmanView" bundle:nil];
+//    if (self) {
+//        self.edgesForExtendedLayout = UIRectEdgeNone;
+//    }
+//    return self;
+//}
 
 + (NSString *)displayName {
 	return @"I'm Batman";
@@ -59,6 +59,9 @@
 	
 	// Add layer as a sublayer of the UIView's layer
 	[self.view.layer addSublayer:self.logoLayer];
+    UIGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doBatmanAnimation)];
+    [self.view addGestureRecognizer:recognizer];
+
 }
 
 - (IBAction)rotate:(id)sender {

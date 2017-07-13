@@ -41,7 +41,9 @@
 #import "Layoutsubviews_test.h"
 #import "TestViewController.h"
 #import "PopMenuVC.h"
-
+#import "ClipImageVC.h"
+#import "ExpandTest.h"
+#import "KVC_Test.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -100,6 +102,9 @@
     [arr4 addObject:NSStringFromClass([GroupNetwork_testVC class])];
     [arr4 addObject:NSStringFromClass([Layoutsubviews_test class])];
     [arr4 addObject:NSStringFromClass([PopMenuVC class])];
+    [arr4 addObject:NSStringFromClass([ClipImageVC class])];
+    [arr4 addObject:NSStringFromClass([ExpandTest class])];
+    [arr4 addObject:NSStringFromClass([KVC_Test class])];
     [self.dataSource addObject:arr4];
     
     [self.view addSubview:self.tableView];

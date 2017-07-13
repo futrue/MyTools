@@ -25,6 +25,7 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.scrollView = [[GXScrollView alloc] init];
     self.scrollView.titleArray = self.titleArray;
+    self.scrollView.itemViews = self.subViews;
     self.scrollView.frame = CGRectMake(0, 100, SCREEN_WIDTH, 300);
     self.scrollView.selectedIndex = 2;
     self.scrollView.midSpace = 50;
@@ -68,8 +69,6 @@
 }
 
 - (void)type2 {
-    self.scrollView.itemViews = self.subViews;
-    return;
     //使用例子
     //准备要添加的控制器和标题数组
     NSMutableArray *vcArr = [NSMutableArray array];

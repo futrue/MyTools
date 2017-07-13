@@ -1,0 +1,39 @@
+//
+//  ClipImageVC.m
+//  MyTools
+//
+//  Created by SongGuoxing on 2017/7/7.
+//  Copyright © 2017年 Xing. All rights reserved.
+//
+
+#import "ClipImageVC.h"
+#import "YYClipImageTool.h"
+
+@interface ClipImageVC ()
+
+@end
+
+@implementation ClipImageVC
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    UIImage *image = [UIImage imageNamed:@"Default_image"];
+    [YYClipImageTool addToCurrentView:self.view clipImage:image backgroundImage:@"bgImage"];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

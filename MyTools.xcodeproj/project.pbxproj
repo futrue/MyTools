@@ -7,14 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2607451D1F0F86D10033EBF9 /* UIButton+CountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 2607451C1F0F86D10033EBF9 /* UIButton+CountDown.m */; };
+		260745201F0F86FD0033EBF9 /* CountForGCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2607451F1F0F86FD0033EBF9 /* CountForGCD.m */; };
+		261131421F15B9900059A2C4 /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 261131411F15B9900059A2C4 /* UIView+Category.m */; };
+		2611325C1F160A890059A2C4 /* KVCContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 261132571F160A890059A2C4 /* KVCContainer.m */; };
+		2611325D1F160A890059A2C4 /* KVCObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 261132591F160A890059A2C4 /* KVCObj.m */; };
+		2611325E1F160A890059A2C4 /* KVCSubObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2611325B1F160A890059A2C4 /* KVCSubObj.m */; };
+		261132611F160AA30059A2C4 /* KVC_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 261132601F160AA30059A2C4 /* KVC_Test.m */; };
 		261C07161ED9606F00941A40 /* GroupNetwork_testVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 261C07151ED9606F00941A40 /* GroupNetwork_testVC.m */; };
+		262C90921F0F628000528CEA /* YYClipImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 262C90911F0F628000528CEA /* YYClipImageTool.m */; };
+		262C90951F0F629800528CEA /* ClipImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 262C90941F0F629800528CEA /* ClipImageVC.m */; };
 		263DBBE91EF3842600C18541 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 263DBBE81EF3842600C18541 /* TestViewController.m */; };
 		26619B541EEE37D500F53796 /* Layoutsubviews_test.m in Sources */ = {isa = PBXBuildFile; fileRef = 26619B531EEE37D500F53796 /* Layoutsubviews_test.m */; };
 		26619B571EEE380A00F53796 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26619B561EEE380A00F53796 /* TestView.m */; };
+		267B98F91F13A46F00012CE7 /* DropDownListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 267B98F81F13A46F00012CE7 /* DropDownListView.m */; };
 		26C1638C1EF8F78D000403CD /* PopMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C1638B1EF8F78D000403CD /* PopMenuVC.m */; };
 		26C1638F1EF8F7A5000403CD /* PopMeneData.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C1638E1EF8F7A5000403CD /* PopMeneData.m */; };
 		26C163921EF8F864000403CD /* Toolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C163911EF8F864000403CD /* Toolbar.m */; };
 		26C163951EF90770000403CD /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C163941EF90770000403CD /* CategoryCell.m */; };
+		26E7DC521F0F6529002D217A /* ExpandTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E7DC511F0F6529002D217A /* ExpandTest.m */; };
+		26E7DC581F0F654C002D217A /* TextEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E7DC541F0F654C002D217A /* TextEntity.m */; };
+		26E7DC591F0F654C002D217A /* TextInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 26E7DC551F0F654C002D217A /* TextInfo.json */; };
+		26E7DC5A1F0F654C002D217A /* TextListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E7DC571F0F654C002D217A /* TextListCell.m */; };
 		390C78FAA8B9EC39902000D8 /* libPods-MyToolsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E555444C98BAAD7F7D4381 /* libPods-MyToolsTests.a */; };
 		8E0C27AC1E287E9D0067C7E0 /* beijing.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0C27A71E287E9D0067C7E0 /* beijing.png */; };
 		8E0C27AD1E287E9D0067C7E0 /* beijing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0C27A81E287E9D0067C7E0 /* beijing@2x.png */; };
@@ -60,8 +74,6 @@
 		8E3C3AD11E2DB9F80083DB33 /* ContactGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C3ACF1E2DB9F80083DB33 /* ContactGroup.m */; };
 		8E3C3AD41E2DBA0C0083DB33 /* Contact_test.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C3AD31E2DBA0C0083DB33 /* Contact_test.m */; };
 		8E3C3AD71E2DC2A00083DB33 /* DropDownMenuVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C3AD61E2DC2A00083DB33 /* DropDownMenuVC2.m */; };
-		8E3C3ADD1E2DC2D20083DB33 /* down_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E3C3AD91E2DC2D20083DB33 /* down_dark.png */; };
-		8E3C3ADE1E2DC2D20083DB33 /* DropDownListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C3ADC1E2DC2D20083DB33 /* DropDownListView.m */; };
 		8E6A3BB11E1CC9F700CDFF7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6A3BB01E1CC9F700CDFF7E /* main.m */; };
 		8E6A3BB41E1CC9F700CDFF7E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6A3BB31E1CC9F700CDFF7E /* AppDelegate.m */; };
 		8E6A3BB71E1CC9F700CDFF7E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6A3BB61E1CC9F700CDFF7E /* ViewController.m */; };
@@ -218,14 +230,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2607451B1F0F86D10033EBF9 /* UIButton+CountDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CountDown.h"; sourceTree = "<group>"; };
+		2607451C1F0F86D10033EBF9 /* UIButton+CountDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CountDown.m"; sourceTree = "<group>"; };
+		2607451E1F0F86FD0033EBF9 /* CountForGCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountForGCD.h; sourceTree = "<group>"; };
+		2607451F1F0F86FD0033EBF9 /* CountForGCD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountForGCD.m; sourceTree = "<group>"; };
+		261131401F15B9900059A2C4 /* UIView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
+		261131411F15B9900059A2C4 /* UIView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
+		261132561F160A890059A2C4 /* KVCContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVCContainer.h; sourceTree = "<group>"; };
+		261132571F160A890059A2C4 /* KVCContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVCContainer.m; sourceTree = "<group>"; };
+		261132581F160A890059A2C4 /* KVCObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVCObj.h; sourceTree = "<group>"; };
+		261132591F160A890059A2C4 /* KVCObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVCObj.m; sourceTree = "<group>"; };
+		2611325A1F160A890059A2C4 /* KVCSubObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVCSubObj.h; sourceTree = "<group>"; };
+		2611325B1F160A890059A2C4 /* KVCSubObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVCSubObj.m; sourceTree = "<group>"; };
+		2611325F1F160AA30059A2C4 /* KVC_Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVC_Test.h; sourceTree = "<group>"; };
+		261132601F160AA30059A2C4 /* KVC_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVC_Test.m; sourceTree = "<group>"; };
 		261C07141ED9606F00941A40 /* GroupNetwork_testVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupNetwork_testVC.h; sourceTree = "<group>"; };
 		261C07151ED9606F00941A40 /* GroupNetwork_testVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupNetwork_testVC.m; sourceTree = "<group>"; };
+		262C90901F0F628000528CEA /* YYClipImageTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClipImageTool.h; sourceTree = "<group>"; };
+		262C90911F0F628000528CEA /* YYClipImageTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYClipImageTool.m; sourceTree = "<group>"; };
+		262C90931F0F629800528CEA /* ClipImageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClipImageVC.h; sourceTree = "<group>"; };
+		262C90941F0F629800528CEA /* ClipImageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClipImageVC.m; sourceTree = "<group>"; };
 		263DBBE71EF3842600C18541 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		263DBBE81EF3842600C18541 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		26619B521EEE37D500F53796 /* Layoutsubviews_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layoutsubviews_test.h; sourceTree = "<group>"; };
 		26619B531EEE37D500F53796 /* Layoutsubviews_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Layoutsubviews_test.m; sourceTree = "<group>"; };
 		26619B551EEE380A00F53796 /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		26619B561EEE380A00F53796 /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		267B98F61F13A46F00012CE7 /* DropDownListProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownListProtocol.h; sourceTree = "<group>"; };
+		267B98F71F13A46F00012CE7 /* DropDownListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownListView.h; sourceTree = "<group>"; };
+		267B98F81F13A46F00012CE7 /* DropDownListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownListView.m; sourceTree = "<group>"; };
 		26C1638A1EF8F78D000403CD /* PopMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopMenuVC.h; sourceTree = "<group>"; };
 		26C1638B1EF8F78D000403CD /* PopMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopMenuVC.m; sourceTree = "<group>"; };
 		26C1638D1EF8F7A5000403CD /* PopMeneData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopMeneData.h; sourceTree = "<group>"; };
@@ -234,6 +267,13 @@
 		26C163911EF8F864000403CD /* Toolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Toolbar.m; sourceTree = "<group>"; };
 		26C163931EF90770000403CD /* CategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCell.h; sourceTree = "<group>"; };
 		26C163941EF90770000403CD /* CategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCell.m; sourceTree = "<group>"; };
+		26E7DC501F0F6529002D217A /* ExpandTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandTest.h; sourceTree = "<group>"; };
+		26E7DC511F0F6529002D217A /* ExpandTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandTest.m; sourceTree = "<group>"; };
+		26E7DC531F0F654C002D217A /* TextEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEntity.h; sourceTree = "<group>"; };
+		26E7DC541F0F654C002D217A /* TextEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextEntity.m; sourceTree = "<group>"; };
+		26E7DC551F0F654C002D217A /* TextInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TextInfo.json; sourceTree = "<group>"; };
+		26E7DC561F0F654C002D217A /* TextListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextListCell.h; sourceTree = "<group>"; };
+		26E7DC571F0F654C002D217A /* TextListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextListCell.m; sourceTree = "<group>"; };
 		3EC756A6AFCD48EDABB5637D /* Pods-MyToolsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyToolsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyToolsUITests/Pods-MyToolsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5BC3649FABE15FFB3DCFEB8D /* Pods-MyToolsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyToolsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyToolsUITests/Pods-MyToolsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7B2BE95D133B94909C9CCB35 /* Pods-MyToolsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyToolsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyToolsTests/Pods-MyToolsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -313,10 +353,6 @@
 		8E3C3AD31E2DBA0C0083DB33 /* Contact_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact_test.m; sourceTree = "<group>"; };
 		8E3C3AD51E2DC2A00083DB33 /* DropDownMenuVC2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownMenuVC2.h; sourceTree = "<group>"; };
 		8E3C3AD61E2DC2A00083DB33 /* DropDownMenuVC2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownMenuVC2.m; sourceTree = "<group>"; };
-		8E3C3AD91E2DC2D20083DB33 /* down_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_dark.png; sourceTree = "<group>"; };
-		8E3C3ADA1E2DC2D20083DB33 /* DropDownChooseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownChooseProtocol.h; sourceTree = "<group>"; };
-		8E3C3ADB1E2DC2D20083DB33 /* DropDownListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownListView.h; sourceTree = "<group>"; };
-		8E3C3ADC1E2DC2D20083DB33 /* DropDownListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownListView.m; sourceTree = "<group>"; };
 		8E6A3BAC1E1CC9F700CDFF7E /* MyTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E6A3BB01E1CC9F700CDFF7E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8E6A3BB21E1CC9F700CDFF7E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -560,6 +596,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2607451A1F0F86C30033EBF9 /* CountDown_GCD */ = {
+			isa = PBXGroup;
+			children = (
+				2607451B1F0F86D10033EBF9 /* UIButton+CountDown.h */,
+				2607451C1F0F86D10033EBF9 /* UIButton+CountDown.m */,
+				2607451E1F0F86FD0033EBF9 /* CountForGCD.h */,
+				2607451F1F0F86FD0033EBF9 /* CountForGCD.m */,
+			);
+			path = CountDown_GCD;
+			sourceTree = "<group>";
+		};
+		261132551F160A890059A2C4 /* KVC */ = {
+			isa = PBXGroup;
+			children = (
+				261132561F160A890059A2C4 /* KVCContainer.h */,
+				261132571F160A890059A2C4 /* KVCContainer.m */,
+				261132581F160A890059A2C4 /* KVCObj.h */,
+				261132591F160A890059A2C4 /* KVCObj.m */,
+				2611325A1F160A890059A2C4 /* KVCSubObj.h */,
+				2611325B1F160A890059A2C4 /* KVCSubObj.m */,
+				2611325F1F160AA30059A2C4 /* KVC_Test.h */,
+				261132601F160AA30059A2C4 /* KVC_Test.m */,
+			);
+			path = KVC;
+			sourceTree = "<group>";
+		};
 		261C07131ED9605100941A40 /* NetworkGroup */ = {
 			isa = PBXGroup;
 			children = (
@@ -567,6 +629,17 @@
 				261C07151ED9606F00941A40 /* GroupNetwork_testVC.m */,
 			);
 			path = NetworkGroup;
+			sourceTree = "<group>";
+		};
+		262C908F1F0F627100528CEA /* ClipImage */ = {
+			isa = PBXGroup;
+			children = (
+				262C90901F0F628000528CEA /* YYClipImageTool.h */,
+				262C90911F0F628000528CEA /* YYClipImageTool.m */,
+				262C90931F0F629800528CEA /* ClipImageVC.h */,
+				262C90941F0F629800528CEA /* ClipImageVC.m */,
+			);
+			path = ClipImage;
 			sourceTree = "<group>";
 		};
 		26619B511EEE37B200F53796 /* LayoutSubview */ = {
@@ -593,6 +666,20 @@
 				26C1638E1EF8F7A5000403CD /* PopMeneData.m */,
 			);
 			path = PopMenu;
+			sourceTree = "<group>";
+		};
+		26E7DC4F1F0F650D002D217A /* ExpandCell */ = {
+			isa = PBXGroup;
+			children = (
+				26E7DC501F0F6529002D217A /* ExpandTest.h */,
+				26E7DC511F0F6529002D217A /* ExpandTest.m */,
+				26E7DC531F0F654C002D217A /* TextEntity.h */,
+				26E7DC541F0F654C002D217A /* TextEntity.m */,
+				26E7DC551F0F654C002D217A /* TextInfo.json */,
+				26E7DC561F0F654C002D217A /* TextListCell.h */,
+				26E7DC571F0F654C002D217A /* TextListCell.m */,
+			);
+			path = ExpandCell;
 			sourceTree = "<group>";
 		};
 		4B9B447881781D6FED3A0F2B /* Frameworks */ = {
@@ -829,10 +916,9 @@
 		8E3C3AD81E2DC2D20083DB33 /* dropDownList */ = {
 			isa = PBXGroup;
 			children = (
-				8E3C3AD91E2DC2D20083DB33 /* down_dark.png */,
-				8E3C3ADA1E2DC2D20083DB33 /* DropDownChooseProtocol.h */,
-				8E3C3ADB1E2DC2D20083DB33 /* DropDownListView.h */,
-				8E3C3ADC1E2DC2D20083DB33 /* DropDownListView.m */,
+				267B98F61F13A46F00012CE7 /* DropDownListProtocol.h */,
+				267B98F71F13A46F00012CE7 /* DropDownListView.h */,
+				267B98F81F13A46F00012CE7 /* DropDownListView.m */,
 			);
 			path = dropDownList;
 			sourceTree = "<group>";
@@ -910,6 +996,10 @@
 		8E6A3BE21E1CD90400CDFF7E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				261132551F160A890059A2C4 /* KVC */,
+				2607451A1F0F86C30033EBF9 /* CountDown_GCD */,
+				26E7DC4F1F0F650D002D217A /* ExpandCell */,
+				262C908F1F0F627100528CEA /* ClipImage */,
 				26C163891EF8F771000403CD /* PopMenu */,
 				26619B511EEE37B200F53796 /* LayoutSubview */,
 				261C07131ED9605100941A40 /* NetworkGroup */,
@@ -1066,6 +1156,8 @@
 				8E7E1AA11E1FA8290084CE93 /* UILabel+Tools.m */,
 				8E7E1AA41E1FA8290084CE93 /* UIView+Tools.h */,
 				8E7E1AA51E1FA8290084CE93 /* UIView+Tools.m */,
+				261131401F15B9900059A2C4 /* UIView+Category.h */,
+				261131411F15B9900059A2C4 /* UIView+Category.m */,
 			);
 			path = "UIView+Tools";
 			sourceTree = "<group>";
@@ -1498,6 +1590,7 @@
 				TargetAttributes = {
 					8E6A3BAB1E1CC9F700CDFF7E = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 547CWCRBRD;
 						ProvisioningStyle = Automatic;
 					};
 					8E6A3BC41E1CC9F700CDFF7E = {
@@ -1587,7 +1680,6 @@
 				8EFF57C51E2320A900CCAB33 /* Address.plist in Resources */,
 				8EFF58421E23748F00CCAB33 /* Default-568h@2x.png in Resources */,
 				8EFF58491E23748F00CCAB33 /* pin@2x.png in Resources */,
-				8E3C3ADD1E2DC2D20083DB33 /* down_dark.png in Resources */,
 				8EFF584C1E23748F00CCAB33 /* cyborg.m4v in Resources */,
 				8E7C67FD1E4B050F002275BB /* starFore@3x.png in Resources */,
 				8E21D8B11E49F8D900F4B6C6 /* share_platform_wechat@2x.png in Resources */,
@@ -1607,6 +1699,7 @@
 				8EFF58C61E23C0DE00CCAB33 /* 222_5.jpg in Resources */,
 				8EFF58461E23748F00CCAB33 /* obama.png in Resources */,
 				8E21D8AC1E49F8D900F4B6C6 /* share_platform_email@2x.png in Resources */,
+				26E7DC591F0F654C002D217A /* TextInfo.json in Resources */,
 				8E7C67FE1E4B050F002275BB /* starGray.png in Resources */,
 				8E6A3BBA1E1CC9F700CDFF7E /* Main.storyboard in Resources */,
 				8EFF58361E23748F00CCAB33 /* arrow-down.png in Resources */,
@@ -1792,6 +1885,7 @@
 				8E0C27B11E287EC20067C7E0 /* Wave&DropDown.m in Sources */,
 				8E0C27C41E2887570067C7E0 /* GXSlideBtn.m in Sources */,
 				8E3C3A961E2DAED20083DB33 /* YHDropDownMenu.m in Sources */,
+				261131421F15B9900059A2C4 /* UIView+Category.m in Sources */,
 				8E7C1A421E30A53E00856B0F /* ParallaxView.m in Sources */,
 				8E7C1A4C1E30A63900856B0F /* ParallaxViewController.m in Sources */,
 				8E6A3BEE1E1CD90400CDFF7E /* Quantz2D_VC.m in Sources */,
@@ -1804,6 +1898,8 @@
 				8EFF58551E23748F00CCAB33 /* StickyNotesViewController.m in Sources */,
 				8EFF58321E23748F00CCAB33 /* ReflectionViewController.m in Sources */,
 				8EFF58521E23748F00CCAB33 /* FlipViewController.m in Sources */,
+				26E7DC5A1F0F654C002D217A /* TextListCell.m in Sources */,
+				267B98F91F13A46F00012CE7 /* DropDownListView.m in Sources */,
 				263DBBE91EF3842600C18541 /* TestViewController.m in Sources */,
 				26C163951EF90770000403CD /* CategoryCell.m in Sources */,
 				8EFF57E31E23731800CCAB33 /* HoleGuide_test.m in Sources */,
@@ -1832,8 +1928,9 @@
 				8E3C3ABE1E2DB3220083DB33 /* FMDatabase.m in Sources */,
 				8E3C3ABF1E2DB3220083DB33 /* FMDatabaseAdditions.m in Sources */,
 				8EFF582B1E23748F00CCAB33 /* BatmanViewController.m in Sources */,
+				261132611F160AA30059A2C4 /* KVC_Test.m in Sources */,
+				2611325D1F160A890059A2C4 /* KVCObj.m in Sources */,
 				8EFF582D1E23748F00CCAB33 /* ImplicitAnimationsViewController.m in Sources */,
-				8E3C3ADE1E2DC2D20083DB33 /* DropDownListView.m in Sources */,
 				8E3C3AA31E2DAFD20083DB33 /* LHWaterWaveView.m in Sources */,
 				8EFF57DF1E23721100CCAB33 /* RandomFllowersVC.m in Sources */,
 				8EFF57CF1E2322C300CCAB33 /* CollectionView_test.m in Sources */,
@@ -1841,14 +1938,17 @@
 				8EFF58531E23748F00CCAB33 /* NoteView.m in Sources */,
 				8EFF582C1E23748F00CCAB33 /* CALayer+Additions.m in Sources */,
 				8E7C1A411E30A53E00856B0F /* JXTSlideClipLabel.m in Sources */,
+				262C90921F0F628000528CEA /* YYClipImageTool.m in Sources */,
 				8E6A3BED1E1CD90400CDFF7E /* CoreImageVC.m in Sources */,
 				8E7E1AA81E1FA8290084CE93 /* NSDate+Utilities.m in Sources */,
 				8E0C27C31E2887570067C7E0 /* GXScrollView.m in Sources */,
 				8E7E1AA61E1FA8290084CE93 /* NSString+Tools.m in Sources */,
 				26619B571EEE380A00F53796 /* TestView.m in Sources */,
 				8EFF58CD1E23C0FC00CCAB33 /* StackView_test.m in Sources */,
+				2611325C1F160A890059A2C4 /* KVCContainer.m in Sources */,
 				26C1638C1EF8F78D000403CD /* PopMenuVC.m in Sources */,
 				8EFF58651E2377FC00CCAB33 /* GXNotifyView.m in Sources */,
+				2607451D1F0F86D10033EBF9 /* UIButton+CountDown.m in Sources */,
 				8E3C3AC21E2DB3220083DB33 /* FMResultSet.m in Sources */,
 				8EFF58B91E23C0DE00CCAB33 /* DemoOneController.m in Sources */,
 				8E3C3AD41E2DBA0C0083DB33 /* Contact_test.m in Sources */,
@@ -1858,6 +1958,7 @@
 				8E7C1A401E30A53E00856B0F /* JXTProgressLabel.m in Sources */,
 				8EFF58B51E23C0DE00CCAB33 /* ScrollViewController.m in Sources */,
 				8EFF58B81E23C0DE00CCAB33 /* UpdateConstraintsController.m in Sources */,
+				26E7DC521F0F6529002D217A /* ExpandTest.m in Sources */,
 				8E3C3AD71E2DC2A00083DB33 /* DropDownMenuVC2.m in Sources */,
 				8E7E1A921E1FA43F0084CE93 /* VisualEffectVC.m in Sources */,
 				8E6A3BB41E1CC9F700CDFF7E /* AppDelegate.m in Sources */,
@@ -1868,18 +1969,22 @@
 				8E3C3AA41E2DAFD20083DB33 /* LHWaveProgressView.m in Sources */,
 				26C1638F1EF8F7A5000403CD /* PopMeneData.m in Sources */,
 				8E3C3AC01E2DB3220083DB33 /* FMDatabasePool.m in Sources */,
+				262C90951F0F629800528CEA /* ClipImageVC.m in Sources */,
 				8EFF582E1E23748F00CCAB33 /* MakeItStickViewController.m in Sources */,
 				8E2B45F61E24E765007F51DB /* OrderListAdManager.m in Sources */,
+				26E7DC581F0F654C002D217A /* TextEntity.m in Sources */,
 				8EFF588C1E23AA4500CCAB33 /* PhotosPreviewVC.m in Sources */,
 				261C07161ED9606F00941A40 /* GroupNetwork_testVC.m in Sources */,
 				8E3C3AA71E2DAFF00083DB33 /* WaterWaveVC.m in Sources */,
 				8EFF57C61E2320A900CCAB33 /* CityPickerView.m in Sources */,
+				2611325E1F160A890059A2C4 /* KVCSubObj.m in Sources */,
 				26619B541EEE37D500F53796 /* Layoutsubviews_test.m in Sources */,
 				8EFF58B31E23C0DE00CCAB33 /* BestSelectModel.m in Sources */,
 				8E7C1A451E30A55900856B0F /* LyricLabelVC.m in Sources */,
 				8EFF58891E23AA2400CCAB33 /* AFSoundManager.m in Sources */,
 				8E7E1AAB1E1FA8290084CE93 /* UIView+Tools.m in Sources */,
 				8E6A3BB11E1CC9F700CDFF7E /* main.m in Sources */,
+				260745201F0F86FD0033EBF9 /* CountForGCD.m in Sources */,
 				8E3C3AC11E2DB3220083DB33 /* FMDatabaseQueue.m in Sources */,
 				8E7C68051E4B053A002275BB /* RatingVC.m in Sources */,
 				8E3C3AD11E2DB9F80083DB33 /* ContactGroup.m in Sources */,
@@ -2036,10 +2141,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 547CWCRBRD;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MyTools/PrefixHeader.pch";
 				INFOPLIST_FILE = MyTools/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sgx.MyTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2052,10 +2158,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 547CWCRBRD;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MyTools/PrefixHeader.pch";
 				INFOPLIST_FILE = MyTools/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sgx.MyTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -39,17 +39,14 @@
 	return @"Animatable Properties";
 }
 
-- (id)init {
-	if ((self = [super initWithNibName:@"LayerView" bundle:nil])) {
-		self.layer = [CALayer layer];
-		self.layer.bounds = CGRectMake(0, 0, 200, 200);
-		self.layer.position = CGPointMake(160, 250);
-		self.layer.backgroundColor = [UIColor redColor].CGColor;
-		self.layer.borderColor = [UIColor blackColor].CGColor;
-		self.layer.opacity = 1.0f;
-		[self.view.layer addSublayer:self.layer];		
-	}
-	return self;
+- (void)addLayer {
+    self.layer = [CALayer layer];
+    self.layer.bounds = CGRectMake(0, 0, 200, 200);
+    self.layer.position = CGPointMake(160, 250);
+    self.layer.backgroundColor = [UIColor redColor].CGColor;
+    self.layer.borderColor = [UIColor blackColor].CGColor;
+    self.layer.opacity = 1.0f;
+    [self.view.layer addSublayer:self.layer];
 }
 
 - (void)viewDidLoad {
@@ -57,7 +54,7 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
 	self.actionsSwitch.on = NO;
 	self.title = [[self class] displayName];
-    
+    [self addLayer];
     for (UIButton *button in self.buttons) {
         button.layer.cornerRadius = 8.0f;
         button.layer.borderWidth = 1.0f;

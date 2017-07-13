@@ -49,8 +49,9 @@
         [button setBackgroundColor:[UIColor grayColor]];
 //        button.layer.cornerRadius = 4;
         [button setTitle:arr[i] forState:UIControlStateNormal];
-        button.center = CGPointMake(SCREEN_WIDTH / 2, 200 + 60 * i);
+        button.contentEdgeInsets = UIEdgeInsetsMake(3, 6, 3, 6);
         [button sizeToFit];
+        button.center = CGPointMake(SCREEN_WIDTH / 2, 200 + 60 * i);
         [self.view addSubview:button];
         SEL sel = NSSelectorFromString(arr[i]);
         [button addTarget:self action:sel forControlEvents:UIControlEventTouchUpInside];

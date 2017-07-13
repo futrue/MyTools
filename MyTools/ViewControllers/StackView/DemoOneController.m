@@ -48,7 +48,7 @@
      //中心距离相等
      UIStackViewDistributionEqualCentering,
      */
-    containerView.distribution = UIStackViewDistributionFill;
+    containerView.distribution = UIStackViewDistributionFillEqually;
     
     containerView.spacing = 10;//设置最小间距
 

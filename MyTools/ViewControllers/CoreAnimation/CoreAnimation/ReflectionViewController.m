@@ -35,13 +35,13 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
 	self.title = [[self class] displayName];
 	self.view.backgroundColor = [UIColor whiteColor];
-	UIImage *image = [UIImage imageNamed:@"mountains.png"];
+	UIImage *image = [UIImage imageNamed:@"mountains.png"];// 145 91
 	
 	// Image Layer
 	CALayer *imageLayer = [CALayer layer];
 	imageLayer.contents = (id)image.CGImage;
 	imageLayer.bounds = CGRectMake(0, 0, image.size.width, image.size.height);
-	imageLayer.position = CGPointMake(160, 130);
+	imageLayer.position = CGPointMake(145, 64);
 	imageLayer.borderColor = [UIColor darkGrayColor].CGColor;
 	imageLayer.borderWidth = 1.0;
 	[self.view.layer addSublayer:imageLayer];

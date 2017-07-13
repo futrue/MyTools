@@ -23,6 +23,7 @@
 #import "Masonry.h"
 #import "YYKit.h"
 #import "UIView+Tools.h"
+#import "UIView+Category.h"
 
 #define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
 

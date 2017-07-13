@@ -141,9 +141,9 @@
         _searchC.dimsBackgroundDuringPresentation = NO;
         [_searchC.searchBar sizeToFit];
         // searchBar 下面的排序按钮
-//        _searchC.searchBar.scopeButtonTitles = [NSArray arrayWithObjects:@"BOY",@"GIRL",@"ALL",nil];
+        _searchC.searchBar.scopeButtonTitles = [NSArray arrayWithObjects:@"BOY",@"GIRL",@"ALL",nil];
 
-//        _searchVC.searchBar.backgroundColor = UIColorFromHex(0xdcdcdc);
+//        _searchC.searchBar.backgroundColor = UIColorFromHex(0xdcdcdc);
         self.tableView.tableHeaderView = _searchC.searchBar;
     }
     return _searchC;

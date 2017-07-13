@@ -50,7 +50,7 @@
     yellowView3.backgroundColor = [UIColor yellowColor];
     [redView addSubview:yellowView3];
     
-    [@[yellowView1, yellowView2, yellowView3] mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:padding leadSpacing:padding tailSpacing:padding];
+    [@[yellowView1, yellowView2, yellowView3] mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:padding * 2 leadSpacing:padding tailSpacing:padding];
     
     [@[yellowView1, yellowView2, yellowView3] mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(redView).offset(10);
