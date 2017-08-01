@@ -24,6 +24,7 @@
 #import "YYKit.h"
 #import "UIView+Tools.h"
 #import "UIView+Category.h"
+#import "UIControlFastGet.h"
 
 #define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
 
@@ -47,7 +48,14 @@
 #define COLOR_BACKGROUND RGB(245, 245, 245)
 #define COLOR_LINE RGB(236, 236, 236)
 #define COLOR_PLACEHOLDER RGB(179, 179, 179)
+#define COLOR_TEXT_CONTENT RGB(102, 102, 102)
 
+/** 正常字体 */
+#define FONT(fontSize) ([[[UIDevice currentDevice] systemVersion] floatValue] < 9.0f) ? [UIFont fontWithName:@"Helvetica" size:fontSize] : [UIFont fontWithName:@"PingFangSC-Regular" size:fontSize]
+/** 粗体 */
+#define FONT_BOLD(fontSize) ([[[UIDevice currentDevice] systemVersion] floatValue] < 9.0f) ? [UIFont fontWithName:@"Helvetica-Bold" size:fontSize] : [UIFont fontWithName:@"PingFangSC-Semibold" size:fontSize]
+/** 细体 */
+#define FONT_LIGHT(fontSize)  ([[[UIDevice currentDevice] systemVersion] floatValue] < 9.0f) ? [UIFont fontWithName:@"Helvetica-Light" size:fontSize] : [UIFont fontWithName:@"PingFangSC-Light" size:fontSize]
 
 
 #define TEST_IMG [UIImage imageNamed:@"test.jpg"]

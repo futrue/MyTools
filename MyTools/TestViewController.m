@@ -8,6 +8,9 @@
 
 #import "TestViewController.h"
 #import "TestView.h"
+#import <objc/runtime.h>
+
+#define RADIANS(degrees) (((degrees) * M_PI) / 180.0)
 
 #define kMaxLength 11
 @interface TestViewController ()
@@ -17,6 +20,10 @@
 @property (nonatomic, strong) TestView *testView;
 @property (nonatomic, strong) UIToolbar *toolbar;
 @property (nonatomic, strong) UITextField *textF;
+@property (nonatomic, strong) YYLabel *label;
+
+
+@property (nonatomic, strong) NSArray *dataArr;
 
 @end
 
@@ -24,13 +31,70 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // 64 = 0 http://www.jianshu.com/p/c0b8c5f131a0
+//    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
     [self startButton];
     [self endButton];
     [self commitButton];
-//    [self testView];
+    [self testView];
     [self setup];
-    
+    [self sortData:nil];
+
 }
+
+- (void)createClass {
+    // 创建一个名为 TangQiaoCustomView 的类，它是UIView的子类
+    Class newClass = objc_allocateClassPair([UIView class], "TangQiaoCustomView", 0);
+    // 为该类增加一个名为 report 的方法
+    class_addMethod(newClass, @selector(report), (IMP)ReportFunction, "v@:");
+    // 注册该类
+    objc_registerClassPair(newClass);
+    
+    // 创建一个 TangQiaoCustomView类的实例
+    id instanceOfNewClass = [[newClass alloc] init];
+    // 调用 report 方法
+    [instanceOfNewClass performSelector:@selector(report)];
+
+}
+
+void ReportFunction(id self, SEL _cmd)
+{
+    NSLog(@"This object is %p.", self);
+    NSLog(@"Class is %@, and super is %@.", [self class], [self superclass]);
+    
+    Class currentClass = [self class];
+    for (int i = 1; i < 5; i++)
+    {
+        NSLog(@"Following the isa pointer %d times gives %p", i, currentClass);
+        currentClass = object_getClass(currentClass);
+    }
+    
+    NSLog(@"NSObject's class is %p", [NSObject class]);
+    NSLog(@"NSObject's meta class is %p", object_getClass([NSObject class]));
+}
+- (void)report {
+    NSLog(@"report");
+}
+
+
+- (void)sortData:(id)data {
+//    NSDictionary *data = @{@"6":@"66",@"8":@"88",@"2":@"22",@"11":@"111",@"5":@"55"};
+    NSArray*keys = [data allKeys];
+    //排序好的key,组成的数组
+    NSArray *sortedArray = [keys sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2){
+        return [obj1 compare:obj2 options:NSNumericSearch];
+    }];
+    // 要用数组
+    NSMutableArray *resultArr = @{}.mutableCopy;
+    for (NSString *key in sortedArray) {
+        id obj = [data objectForKey:key];
+        [resultArr addObject:@{key:obj}];
+    }
+    NSLog(@"resultArr == %@",resultArr);
+    self.dataArr = resultArr;
+}
+
 
 - (void)setup {
     self.textF.frame = CGRectMake(20, 200, 200, 30);
@@ -38,7 +102,85 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(textFiledEditChanged:)
                                                 name:UITextFieldTextDidChangeNotification
                                               object:self.textF];
+    
+    
+    NSMutableAttributedString *text = [NSMutableAttributedString new];
+    UIFont *font = [UIFont systemFontOfSize:16];
+    
+    
+    //添加文本
+    NSString *title =@"豫章故郡，洪都新府。星分翼轸，地接衡庐。襟三江而带五湖，控蛮荆而引瓯越。物华天宝，龙光射牛斗之墟；人杰地灵，徐孺下陈蕃之榻。雄州雾列，俊采星驰。台隍枕夷夏之交，宾主尽东南之美。都督阎公之雅望，棨戟遥临；宇文新州之懿范，襜帷暂驻。十旬休假，胜友如云；千里逢迎，高朋满座。";
+    [text appendAttributedString:[[NSAttributedString alloc] initWithString:title attributes:nil]];
+    
+    text.font = font ;
+    
+    
+    _label = [YYLabel new];
+    _label.userInteractionEnabled =YES;
+    _label.numberOfLines =0;
+    _label.textVerticalAlignment = YYTextVerticalAlignmentTop;
+    YYTextLayout *layout = [YYTextLayout layoutWithContainerSize:CGSizeMake(240, 260) text:text];
+    _label.textLayout = layout;
+    _label.frame = CGRectMake(60,360, 240,260);
+    _label.frame = CGRectMake(60,360, [self measureFrame:layout.frame].width,[self measureFrame:layout.frame].height);
 
+    _label.attributedText = text;
+    
+    [self.view addSubview:_label];
+    
+    _label.layer.borderWidth =0.5;
+    _label.layer.borderColor = [UIColor colorWithRed:0.000 green:0.463 blue:1.000 alpha:1.000].CGColor;
+    
+    
+    [self addSeeMoreButton];
+
+
+}
+- (void)addSeeMoreButton {
+    __weak typeof(self) _self =self;
+    NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:@"...more"];
+    
+    YYTextHighlight *hi = [YYTextHighlight new];
+    [hi setColor:[UIColor colorWithRed:0.578 green:0.790 blue:1.000 alpha:1.000]];
+    hi.tapAction = ^(UIView *containerView,NSAttributedString *text,NSRange range, CGRect rect) {
+        YYLabel *label = _self.label;
+        [label sizeToFit];
+    };
+    
+    [text setColor:[UIColor colorWithRed:0.000 green:0.449 blue:1.000 alpha:1.000] range:[text.string rangeOfString:@"more"]];
+    [text setTextHighlight:hi range:[text.string rangeOfString:@"more"]];
+    text.font =_label.font;
+    
+    YYLabel *seeMore = [YYLabel new];
+    seeMore.attributedText = text;
+    [seeMore sizeToFit];
+    NSAttributedString *truncationToken = [NSAttributedString attachmentStringWithContent:seeMore contentMode:UIViewContentModeCenter attachmentSize:seeMore.frame.size alignToFont:text.font alignment:YYTextVerticalAlignmentCenter];
+    _label.truncationToken = truncationToken;
+}
+
+- (CGSize)measureFrame:(CTFrameRef)frame
+{
+    CGPathRef framePath = CTFrameGetPath(frame);
+    CGRect frameRect = CGPathGetBoundingBox(framePath);
+    CFArrayRef lines = CTFrameGetLines(frame);
+    CFIndex numLines = CFArrayGetCount(lines);
+    CGFloat maxWidth = 0;
+    CGFloat textHeight = 0;
+    CFIndex lastLineIndex = numLines - 1;
+    
+    for(CFIndex index = 0; index < numLines; index++)
+    {
+        CGFloat ascent, descent, leading, width;
+        CTLineRef line = (CTLineRef) CFArrayGetValueAtIndex(lines, index);
+        width = CTLineGetTypographicBounds(line, &ascent,  &descent, &leading);
+        if (width > maxWidth) { maxWidth = width; }
+        if (index == lastLineIndex) {
+            CGPoint lastLineOrigin;
+            CTFrameGetLineOrigins(frame, CFRangeMake(lastLineIndex, 1), &lastLineOrigin);
+            textHeight =  CGRectGetMaxY(frameRect) - lastLineOrigin.y + descent;
+        }
+    }
+    return CGSizeMake(ceil(maxWidth), ceil(textHeight));
 }
 
 - (void)textFiledEditChanged:(NSNotification *)noti {
@@ -82,6 +224,7 @@
 }
 
 - (void)startAction {
+    [self startAnimate];
 //    [self performSelector:@selector(didRuninCurrModel:) withObject:[NSNumber numberWithBool:YES] afterDelay:3.0f];
 //    [self performSelector:@selector(didRuninCurrModelNoArgument) withObject:nil afterDelay:3.0f];
     
@@ -91,6 +234,7 @@
 }
 
 - (void)endAction {
+    [self stopAnimate];
 //    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(didRuninCurrModel:) object:[NSNumber numberWithBool:YES]];//可以取消成功。
 //    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(didRuninCurrModel:) object:[NSNumber numberWithBool:NO]];//不能取消成功。参数不匹配
 //
@@ -106,6 +250,21 @@
 
 }
 
+- (void)startAnimate {
+    UIView *view = self.testView;
+    view.transform = CGAffineTransformRotate(CGAffineTransformIdentity, RADIANS(-5));
+    
+    [UIView animateWithDuration:0.25 delay:0.0 options:(UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse) animations:^ {
+        view.transform = CGAffineTransformRotate(CGAffineTransformIdentity, RADIANS(5));
+    } completion:nil];
+}
+
+- (void)stopAnimate {
+    UIView *view = self.testView;
+    [UIView animateWithDuration:0.25 delay:0.0 options:(UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveLinear) animations:^ {
+        view.transform = CGAffineTransformIdentity;
+    } completion:nil];
+}
 
 - (UIButton *)startButton {
     if (!_startButton) {
@@ -154,7 +313,7 @@
 
 - (TestView *)testView {
     if (!_testView) {
-        _testView = [[TestView alloc] initWithFrame:CGRectMake(20, 300, 200, 80)];
+        _testView = [[TestView alloc] initWithFrame:CGRectMake(10, 370, self.view.width - 20, 270)];
         _testView.backgroundColor = [UIColor grayColor];
         [self.view addSubview:_testView];
     }

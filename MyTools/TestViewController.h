@@ -10,4 +10,7 @@
 
 @interface TestViewController : UIViewController
 
+- (void)sortData:(id)data;
+@property (nonatomic, strong, readonly) NSArray *dataArr;
+
 @end

@@ -18,9 +18,12 @@
 		262C90921F0F628000528CEA /* YYClipImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 262C90911F0F628000528CEA /* YYClipImageTool.m */; };
 		262C90951F0F629800528CEA /* ClipImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 262C90941F0F629800528CEA /* ClipImageVC.m */; };
 		263DBBE91EF3842600C18541 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 263DBBE81EF3842600C18541 /* TestViewController.m */; };
+		263EAE931F30653B00A0252A /* AttributedLabel_test.m in Sources */ = {isa = PBXBuildFile; fileRef = 263EAE921F30653B00A0252A /* AttributedLabel_test.m */; };
+		263EAE961F30661E00A0252A /* UIControlFastGet.m in Sources */ = {isa = PBXBuildFile; fileRef = 263EAE951F30661E00A0252A /* UIControlFastGet.m */; };
 		26619B541EEE37D500F53796 /* Layoutsubviews_test.m in Sources */ = {isa = PBXBuildFile; fileRef = 26619B531EEE37D500F53796 /* Layoutsubviews_test.m */; };
 		26619B571EEE380A00F53796 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26619B561EEE380A00F53796 /* TestView.m */; };
 		267B98F91F13A46F00012CE7 /* DropDownListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 267B98F81F13A46F00012CE7 /* DropDownListView.m */; };
+		2687CA411F29BBDE0005C844 /* TableViewTransformVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2687CA401F29BBDE0005C844 /* TableViewTransformVC.m */; };
 		26C1638C1EF8F78D000403CD /* PopMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C1638B1EF8F78D000403CD /* PopMenuVC.m */; };
 		26C1638F1EF8F7A5000403CD /* PopMeneData.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C1638E1EF8F7A5000403CD /* PopMeneData.m */; };
 		26C163921EF8F864000403CD /* Toolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C163911EF8F864000403CD /* Toolbar.m */; };
@@ -252,6 +255,10 @@
 		262C90941F0F629800528CEA /* ClipImageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClipImageVC.m; sourceTree = "<group>"; };
 		263DBBE71EF3842600C18541 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		263DBBE81EF3842600C18541 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		263EAE911F30653B00A0252A /* AttributedLabel_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributedLabel_test.h; sourceTree = "<group>"; };
+		263EAE921F30653B00A0252A /* AttributedLabel_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributedLabel_test.m; sourceTree = "<group>"; };
+		263EAE941F30661E00A0252A /* UIControlFastGet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIControlFastGet.h; sourceTree = "<group>"; };
+		263EAE951F30661E00A0252A /* UIControlFastGet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIControlFastGet.m; sourceTree = "<group>"; };
 		26619B521EEE37D500F53796 /* Layoutsubviews_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layoutsubviews_test.h; sourceTree = "<group>"; };
 		26619B531EEE37D500F53796 /* Layoutsubviews_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Layoutsubviews_test.m; sourceTree = "<group>"; };
 		26619B551EEE380A00F53796 /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
@@ -259,6 +266,8 @@
 		267B98F61F13A46F00012CE7 /* DropDownListProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownListProtocol.h; sourceTree = "<group>"; };
 		267B98F71F13A46F00012CE7 /* DropDownListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownListView.h; sourceTree = "<group>"; };
 		267B98F81F13A46F00012CE7 /* DropDownListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownListView.m; sourceTree = "<group>"; };
+		2687CA3F1F29BBDE0005C844 /* TableViewTransformVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewTransformVC.h; sourceTree = "<group>"; };
+		2687CA401F29BBDE0005C844 /* TableViewTransformVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewTransformVC.m; sourceTree = "<group>"; };
 		26C1638A1EF8F78D000403CD /* PopMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopMenuVC.h; sourceTree = "<group>"; };
 		26C1638B1EF8F78D000403CD /* PopMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopMenuVC.m; sourceTree = "<group>"; };
 		26C1638D1EF8F7A5000403CD /* PopMeneData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopMeneData.h; sourceTree = "<group>"; };
@@ -642,6 +651,15 @@
 			path = ClipImage;
 			sourceTree = "<group>";
 		};
+		263EAE901F30651200A0252A /* AttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				263EAE911F30653B00A0252A /* AttributedLabel_test.h */,
+				263EAE921F30653B00A0252A /* AttributedLabel_test.m */,
+			);
+			path = AttributedLabel;
+			sourceTree = "<group>";
+		};
 		26619B511EEE37B200F53796 /* LayoutSubview */ = {
 			isa = PBXGroup;
 			children = (
@@ -651,6 +669,15 @@
 				26619B561EEE380A00F53796 /* TestView.m */,
 			);
 			path = LayoutSubview;
+			sourceTree = "<group>";
+		};
+		2687CA3E1F29BBC60005C844 /* TableViewTransform */ = {
+			isa = PBXGroup;
+			children = (
+				2687CA3F1F29BBDE0005C844 /* TableViewTransformVC.h */,
+				2687CA401F29BBDE0005C844 /* TableViewTransformVC.m */,
+			);
+			path = TableViewTransform;
 			sourceTree = "<group>";
 		};
 		26C163891EF8F771000403CD /* PopMenu */ = {
@@ -996,6 +1023,8 @@
 		8E6A3BE21E1CD90400CDFF7E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				263EAE901F30651200A0252A /* AttributedLabel */,
+				2687CA3E1F29BBC60005C844 /* TableViewTransform */,
 				261132551F160A890059A2C4 /* KVC */,
 				2607451A1F0F86C30033EBF9 /* CountDown_GCD */,
 				26E7DC4F1F0F650D002D217A /* ExpandCell */,
@@ -1152,6 +1181,8 @@
 		8E7E1A9F1E1FA8290084CE93 /* UIView+Tools */ = {
 			isa = PBXGroup;
 			children = (
+				263EAE941F30661E00A0252A /* UIControlFastGet.h */,
+				263EAE951F30661E00A0252A /* UIControlFastGet.m */,
 				8E7E1AA01E1FA8290084CE93 /* UILabel+Tools.h */,
 				8E7E1AA11E1FA8290084CE93 /* UILabel+Tools.m */,
 				8E7E1AA41E1FA8290084CE93 /* UIView+Tools.h */,
@@ -1896,12 +1927,14 @@
 				8E3C3AC71E2DB3620083DB33 /* SQLite_test.m in Sources */,
 				8E3C3A9A1E2DAEEA0083DB33 /* DropDownMenuVC.m in Sources */,
 				8EFF58551E23748F00CCAB33 /* StickyNotesViewController.m in Sources */,
+				2687CA411F29BBDE0005C844 /* TableViewTransformVC.m in Sources */,
 				8EFF58321E23748F00CCAB33 /* ReflectionViewController.m in Sources */,
 				8EFF58521E23748F00CCAB33 /* FlipViewController.m in Sources */,
 				26E7DC5A1F0F654C002D217A /* TextListCell.m in Sources */,
 				267B98F91F13A46F00012CE7 /* DropDownListView.m in Sources */,
 				263DBBE91EF3842600C18541 /* TestViewController.m in Sources */,
 				26C163951EF90770000403CD /* CategoryCell.m in Sources */,
+				263EAE961F30661E00A0252A /* UIControlFastGet.m in Sources */,
 				8EFF57E31E23731800CCAB33 /* HoleGuide_test.m in Sources */,
 				8EFF57D31E23648000CCAB33 /* UIView_Convert.m in Sources */,
 				8EFF58581E2374AB00CCAB33 /* CoreAnimation_test.m in Sources */,
@@ -1919,6 +1952,7 @@
 				8E0CCA411E25CD41009501D5 /* DDOrderListAdView.m in Sources */,
 				8EFF58B61E23C0DE00CCAB33 /* TableViewController.m in Sources */,
 				8EFF57C91E23210A00CCAB33 /* CityPickerVC.m in Sources */,
+				263EAE931F30653B00A0252A /* AttributedLabel_test.m in Sources */,
 				8EFF58641E2377FC00CCAB33 /* GXAlertView.m in Sources */,
 				26C163921EF8F864000403CD /* Toolbar.m in Sources */,
 				8E6A3BB71E1CC9F700CDFF7E /* ViewController.m in Sources */,

@@ -44,6 +44,8 @@
 #import "ClipImageVC.h"
 #import "ExpandTest.h"
 #import "KVC_Test.h"
+#import "TableViewTransformVC.h"
+#import "AttributedLabel_test.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -105,6 +107,8 @@
     [arr4 addObject:NSStringFromClass([ClipImageVC class])];
     [arr4 addObject:NSStringFromClass([ExpandTest class])];
     [arr4 addObject:NSStringFromClass([KVC_Test class])];
+    [arr4 addObject:NSStringFromClass([TableViewTransformVC class])];
+    [arr4 addObject:NSStringFromClass([AttributedLabel_test class])];
     [self.dataSource addObject:arr4];
     
     [self.view addSubview:self.tableView];
@@ -247,5 +251,23 @@
     }
     
 }
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    float scrollViewHeight = scrollView.frame.size.height;
+    float scrollContentSizeHeight = scrollView.contentSize.height;
+    float scrollOffset = scrollView.contentOffset.y;
+    
+    if (scrollOffset == 0)
+    {
+        NSLog(@"滚动到了顶部");
+        // 滚动到了顶部
+    }
+    else if (scrollOffset + scrollViewHeight == scrollContentSizeHeight)
+    {
+        NSLog(@"滚动到了底部");
+        // 滚动到了底部
+    }
+}
+
 
 @end

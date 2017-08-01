@@ -145,6 +145,7 @@
 }
 
 -(void)openUrl:(NSString *)urlStr{
+    // http://www.jianshu.com/p/9fcd37c0ea05    37
     //注意url中包含协议名称，iOS根据协议确定调用哪个应用，例如发送邮件是“sms://”其中“//”可以省略写成“sms:”(其他协议也是如此)
     NSURL *url=[NSURL URLWithString:urlStr];
     UIApplication *application=[UIApplication sharedApplication];
@@ -153,6 +154,7 @@
         return;
     }
     [[UIApplication sharedApplication] openURL:url];
+
 }
 
 
