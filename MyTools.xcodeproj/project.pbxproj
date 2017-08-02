@@ -20,6 +20,9 @@
 		263DBBE91EF3842600C18541 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 263DBBE81EF3842600C18541 /* TestViewController.m */; };
 		263EAE931F30653B00A0252A /* AttributedLabel_test.m in Sources */ = {isa = PBXBuildFile; fileRef = 263EAE921F30653B00A0252A /* AttributedLabel_test.m */; };
 		263EAE961F30661E00A0252A /* UIControlFastGet.m in Sources */ = {isa = PBXBuildFile; fileRef = 263EAE951F30661E00A0252A /* UIControlFastGet.m */; };
+		264C86CA1F31AAB4009C6C25 /* XPQLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 264C86C51F31AAB4009C6C25 /* XPQLabel.m */; };
+		264C86CB1F31AAB4009C6C25 /* XPQLabelPath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 264C86C71F31AAB4009C6C25 /* XPQLabelPath.mm */; };
+		264C86CC1F31AAB4009C6C25 /* XPQPath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 264C86C81F31AAB4009C6C25 /* XPQPath.cpp */; };
 		26619B541EEE37D500F53796 /* Layoutsubviews_test.m in Sources */ = {isa = PBXBuildFile; fileRef = 26619B531EEE37D500F53796 /* Layoutsubviews_test.m */; };
 		26619B571EEE380A00F53796 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26619B561EEE380A00F53796 /* TestView.m */; };
 		267B98F91F13A46F00012CE7 /* DropDownListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 267B98F81F13A46F00012CE7 /* DropDownListView.m */; };
@@ -259,6 +262,12 @@
 		263EAE921F30653B00A0252A /* AttributedLabel_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributedLabel_test.m; sourceTree = "<group>"; };
 		263EAE941F30661E00A0252A /* UIControlFastGet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIControlFastGet.h; sourceTree = "<group>"; };
 		263EAE951F30661E00A0252A /* UIControlFastGet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIControlFastGet.m; sourceTree = "<group>"; };
+		264C86C41F31AAB4009C6C25 /* XPQLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPQLabel.h; sourceTree = "<group>"; };
+		264C86C51F31AAB4009C6C25 /* XPQLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPQLabel.m; sourceTree = "<group>"; };
+		264C86C61F31AAB4009C6C25 /* XPQLabelPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPQLabelPath.h; sourceTree = "<group>"; };
+		264C86C71F31AAB4009C6C25 /* XPQLabelPath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XPQLabelPath.mm; sourceTree = "<group>"; };
+		264C86C81F31AAB4009C6C25 /* XPQPath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XPQPath.cpp; sourceTree = "<group>"; };
+		264C86C91F31AAB4009C6C25 /* XPQPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPQPath.h; sourceTree = "<group>"; };
 		26619B521EEE37D500F53796 /* Layoutsubviews_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layoutsubviews_test.h; sourceTree = "<group>"; };
 		26619B531EEE37D500F53796 /* Layoutsubviews_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Layoutsubviews_test.m; sourceTree = "<group>"; };
 		26619B551EEE380A00F53796 /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
@@ -654,10 +663,24 @@
 		263EAE901F30651200A0252A /* AttributedLabel */ = {
 			isa = PBXGroup;
 			children = (
+				264C86C31F31AAB4009C6C25 /* XPQLabel */,
 				263EAE911F30653B00A0252A /* AttributedLabel_test.h */,
 				263EAE921F30653B00A0252A /* AttributedLabel_test.m */,
 			);
 			path = AttributedLabel;
+			sourceTree = "<group>";
+		};
+		264C86C31F31AAB4009C6C25 /* XPQLabel */ = {
+			isa = PBXGroup;
+			children = (
+				264C86C41F31AAB4009C6C25 /* XPQLabel.h */,
+				264C86C51F31AAB4009C6C25 /* XPQLabel.m */,
+				264C86C61F31AAB4009C6C25 /* XPQLabelPath.h */,
+				264C86C71F31AAB4009C6C25 /* XPQLabelPath.mm */,
+				264C86C81F31AAB4009C6C25 /* XPQPath.cpp */,
+				264C86C91F31AAB4009C6C25 /* XPQPath.h */,
+			);
+			path = XPQLabel;
 			sourceTree = "<group>";
 		};
 		26619B511EEE37B200F53796 /* LayoutSubview */ = {
@@ -1911,10 +1934,12 @@
 				8E6A3BF01E1CD90400CDFF7E /* YYLabel_testVC.m in Sources */,
 				8EFF58B71E23C0DE00CCAB33 /* TestCell.m in Sources */,
 				8EFF57C01E23203800CCAB33 /* CaculatorController.m in Sources */,
+				264C86CB1F31AAB4009C6C25 /* XPQLabelPath.mm in Sources */,
 				8EFF58B41E23C0DE00CCAB33 /* EqualMarginController.m in Sources */,
 				8E0C27C71E2887780067C7E0 /* Slider_testVC.m in Sources */,
 				8E0C27B11E287EC20067C7E0 /* Wave&DropDown.m in Sources */,
 				8E0C27C41E2887570067C7E0 /* GXSlideBtn.m in Sources */,
+				264C86CC1F31AAB4009C6C25 /* XPQPath.cpp in Sources */,
 				8E3C3A961E2DAED20083DB33 /* YHDropDownMenu.m in Sources */,
 				261131421F15B9900059A2C4 /* UIView+Category.m in Sources */,
 				8E7C1A421E30A53E00856B0F /* ParallaxView.m in Sources */,
@@ -1989,6 +2014,7 @@
 				8EFF58B21E23C0DE00CCAB33 /* BasicController.m in Sources */,
 				8E6A3BEF1E1CD90400CDFF7E /* QuartzView.m in Sources */,
 				8E3C3ABD1E2DB3220083DB33 /* FMDatabase+Category.m in Sources */,
+				264C86CA1F31AAB4009C6C25 /* XPQLabel.m in Sources */,
 				8E7C1A401E30A53E00856B0F /* JXTProgressLabel.m in Sources */,
 				8EFF58B51E23C0DE00CCAB33 /* ScrollViewController.m in Sources */,
 				8EFF58B81E23C0DE00CCAB33 /* UpdateConstraintsController.m in Sources */,

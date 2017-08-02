@@ -54,7 +54,7 @@
 	playerLayer.shadowOpacity = 0.80;
 
     // Add perspective transform
-	self.view.layer.sublayerTransform = CATransform3DMakePerspective(1000);	
+    self.view.layer.sublayerTransform = CATransform3DMakeScale(1, 0.7, 0.5); //CATransform3DMakePerspective(1000);
 	[self.view.layer addSublayer:playerLayer];
 	
     // Set up slider used to rotate video around Y-axis

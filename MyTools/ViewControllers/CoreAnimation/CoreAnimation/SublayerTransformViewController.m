@@ -60,7 +60,7 @@
     
 	self.rootLayer = [CALayer layer];
     // Apply perspective transform
-	self.rootLayer.sublayerTransform = CATransform3DMakePerspective(1000);
+    self.rootLayer.sublayerTransform = CATransform3DMakeTranslation(20, 20, 20);//CATransform3DMakePerspective(1000);
 	self.rootLayer.frame = self.view.bounds;
 	[self.view.layer addSublayer:self.rootLayer];
 	

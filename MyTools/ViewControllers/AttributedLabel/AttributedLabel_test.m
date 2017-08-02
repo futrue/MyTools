@@ -7,7 +7,7 @@
 //
 
 #import "AttributedLabel_test.h"
-//#import "XPQLabel.h"
+#import "XPQLabel.h"
 
 #define OriginColor RGB(0, 122.4, 255)//(0, 0.48, 1)
 @interface AttributedLabel_test ()
@@ -30,8 +30,11 @@
 
 @property (nonatomic, strong) UIView *contentView;
 
-//@property (nonatomic, strong) XPQLabel *stringLabel;
-//@property (nonatomic, strong) XPQLabel *attributedLabel;
+@property (nonatomic, assign) BOOL animation;
+@property (nonatomic, assign) BOOL rotate;
+
+@property (nonatomic, strong) XPQLabel *stringLabel;
+@property (nonatomic, strong) XPQLabel *attributedLabel;
 
 @end
 
@@ -41,55 +44,16 @@
     [super viewDidLoad];
     self.title = @"很厉害的label";
     self.view.backgroundColor = [UIColor whiteColor];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+
     [self setupUI];
 }
 
 - (void)setupUI {
     [self addViews];
     [self layoutViews];
-    [self addLabels];
 }
 
-- (void)addLabels {
-    /*
-     _stringLabel = [[XPQLabel alloc] init];
-     _stringLabel.text = @"这里是一串普通的文本文字。";
-     _stringLabel.backgroundColor = [UIColor colorWithWhite:0.1 alpha:0.2];
-     NSMutableAttributedString *attriString = [[NSMutableAttributedString alloc] initWithString:@"this is attributed string."];
-     //把this的字体颜色变为红色
-     [attriString addAttribute:(NSString *)kCTForegroundColorAttributeName
-     value:(id)[UIColor redColor].CGColor
-     range:NSMakeRange(0, 4)];
-     //把is变为绿色
-     [attriString addAttribute:(NSString *)kCTForegroundColorAttributeName
-     value:(id)[UIColor greenColor].CGColor
-     range:NSMakeRange(5, 2)];
-     //改变this的字体，value必须是一个CTFontRef
-     [attriString addAttribute:(NSString *)kCTFontAttributeName value:(id)CFBridgingRelease(CTFontCreateWithName((CFStringRef)[UIFont boldSystemFontOfSize:12].fontName, 20, NULL)) range:NSMakeRange(8, 10)];
-     //给this加上下划线，value可以在指定的枚举中选择
-     [attriString addAttribute:(NSString *)kCTUnderlineStyleAttributeName
-     value:(id)[NSNumber numberWithInt:kCTUnderlineStyleDouble]
-     range:NSMakeRange(19, 6)];
-     _attributedLabel = [[XPQLabel alloc] init];
-     _attributedLabel.attributedText = attriString;
-     _attributedLabel.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1];
-     
-     [self.view addSubview:_stringLabel];
-     [self.view addSubview:_attributedLabel];
-     [_stringLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-     make.leading.offset(10);
-     make.trailing.offset(-10);
-     make.top.offset(10);
-     make.height.offset(100);
-     }];
-     [_attributedLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-     make.leading.trailing.height.equalTo(_stringLabel);
-     make.trailing.offset(-10);
-     make.top.equalTo(_stringLabel.mas_bottom).offset(10);
-     }];
-
-     */
-}
 - (void)addViews {
     [self.view addSubview:self.contentView];
     
@@ -108,6 +72,9 @@
     [self.contentView addSubview:self.enter2Btn];
     [self.contentView addSubview:self.exit1Btn];
     [self.contentView addSubview:self.exit2Btn];
+    
+    [self.view addSubview:self.stringLabel];
+    [self.view addSubview:self.attributedLabel];
 }
 
 - (void)layoutViews {
@@ -191,45 +158,140 @@
         make.bottom.equalTo(self.contentView.mas_bottom).offset(-5);
     }];
 
+    //
+    [self.stringLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.offset(10);
+        make.trailing.offset(-10);
+        make.top.offset(10);
+        make.height.offset(100);
+    }];
+    [self.attributedLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.trailing.height.equalTo(_stringLabel);
+        make.trailing.offset(-10);
+        make.top.equalTo(_stringLabel.mas_bottom).offset(10);
+    }];
 }
 
 #pragma mark - Actions
 - (void)horiSegChanged:(UISegmentedControl *)seg {
     NSLog(@"水平排版");
+    BOOL animation = self.animation;
+    switch (seg.selectedSegmentIndex) {
+        case 0:
+            [self.stringLabel setTextHorizontalAlignment:XPQLabelHorizontalAlignmentLeft animation:animation];
+            [self.attributedLabel setTextHorizontalAlignment:XPQLabelHorizontalAlignmentLeft animation:animation];
+            break;
+        case 1:
+            [self.stringLabel setTextHorizontalAlignment:XPQLabelHorizontalAlignmentCenter animation:animation];
+            [self.attributedLabel setTextHorizontalAlignment:XPQLabelHorizontalAlignmentCenter animation:animation];
+            break;
+        case 2:
+            [self.stringLabel setTextHorizontalAlignment:XPQLabelHorizontalAlignmentRight animation:animation];
+            [self.attributedLabel setTextHorizontalAlignment:XPQLabelHorizontalAlignmentRight animation:animation];
+            break;
+
+        default:
+            break;
+    }
 
 }
 - (void)vetiSegChanged:(UISegmentedControl *)seg {
     NSLog(@"垂直排版");
-
+    BOOL animation = self.animation;
+    switch (seg.selectedSegmentIndex) {
+        case 0:
+            [self.stringLabel setTextVerticalAlignment:XPQLabelVerticalAlignmentUp animation:animation];
+            [self.attributedLabel setTextVerticalAlignment:XPQLabelVerticalAlignmentUp animation:animation];
+            break;
+        case 1:
+            [self.stringLabel setTextVerticalAlignment:XPQLabelVerticalAlignmentCenter animation:animation];
+            [self.attributedLabel setTextVerticalAlignment:XPQLabelVerticalAlignmentCenter animation:animation];
+            break;
+        case 2:
+            [self.stringLabel setTextVerticalAlignment:XPQLabelVerticalAlignmentDown animation:animation];
+            [self.attributedLabel setTextVerticalAlignment:XPQLabelVerticalAlignmentDown animation:animation];
+            break;
+            
+        default:
+            break;
+    }
 }
 - (void)pathSegChanged:(UISegmentedControl *)seg {
     NSLog(@"路径排版");
+    BOOL animation = self.animation;
+    BOOL rotate = self.rotate;
+    switch (seg.selectedSegmentIndex) {
+        case 0:
+            [self.stringLabel setPath:nil rotate:rotate animation:animation];
+            [self.attributedLabel setPath:nil rotate:rotate animation:animation];
+            break;
+        case 1:
+        {
+            XPQLabelPath *path = [XPQLabelPath pathForBeginPoint:CGPointMake(10.0, 10.0)];
+            [path addLineToPoint:CGPointMake(250, 50)];
+            
+            XPQLabelPath *path1 = [XPQLabelPath pathForBeginPoint:CGPointMake(10.0, 15.0)];
+            [path1 addLineToPoint:CGPointMake(240, 10)];
+
+            [self.stringLabel setPath:path rotate:rotate animation:animation];
+            [self.attributedLabel setPath:path1 rotate:rotate animation:animation];
+            
+        }
+            break;
+        case 2: {
+            XPQLabelPath *path = [XPQLabelPath pathForBeginPoint:CGPointMake(20.0, 70.0)];
+            [path addArcWithCentrePoint:CGPointMake(90.0, 70.0) angle:-M_PI];
+
+            [self.stringLabel setPath:path rotate:rotate animation:animation];
+            [self.attributedLabel setPath:path rotate:rotate animation:animation];
+        }
+            break;
+        case 3: {
+            XPQLabelPath *path = [XPQLabelPath pathForBeginPoint:CGPointMake(20.0, 60.0)];
+            [path addCurveToPoint:CGPointMake(300.0, 60.0) anchorPoint:CGPointMake(100.0, 0.0)];
+            
+            [self.stringLabel setPath:path rotate:rotate animation:animation];
+            [self.attributedLabel setPath:path rotate:rotate animation:animation];
+        }
+            break;
+        default:
+            break;
+    }
+
 
 }
 - (void)animateSegChanged:(UISegmentedControl *)seg {
     NSLog(@"是否有动画");
-
+    self.animation = seg.selectedSegmentIndex == 0;
 }
 - (void)rotationSegChanged:(UISegmentedControl *)seg {
     NSLog(@"是都旋转");
-
+    self.rotate = seg.selectedSegmentIndex == 0;
 }
 
 - (void)enter1Action {
     NSLog(@"移动入场");
-    
+    [self.stringLabel startShowWithDirection:XPQLabelAnimationDirectionDown duration:0.5 bounce:0.0 stepTime:0.2];
+    [self.attributedLabel startShowWithDirection:XPQLabelAnimationDirectionLeft duration:0.5 bounce:0.0 stepTime:0.2];
+
 }
 - (void)enter2Action {
     NSLog(@"显现入场");
-    
+    CATransform3D transform = CATransform3DScale(CATransform3DIdentity, 0.0, 0.0, 1.0);
+    [self.stringLabel startFixedShowWithTransform:&transform duration:1.0 stepTime:0.1]; CATransform3DRotate(CATransform3DIdentity, 2 * M_PI, 0.0, 0.0, 1.0);
+    [self.attributedLabel startFixedShowWithTransform:&transform duration:1.0 stepTime:0.1];
 }
 - (void)exit1Action {
     NSLog(@"移动出场");
+    [self.stringLabel startHideWithDirection:XPQLabelAnimationDirectionLeft duration:0.5 stepTime:0.2];
+    [self.attributedLabel startHideWithDirection:XPQLabelAnimationDirectionDown duration:0.5 stepTime:0.2];
 
 }
 - (void)exit2Action {
     NSLog(@"消失出场");
-    
+    CATransform3D transform = CATransform3DScale(CATransform3DIdentity, 0.0, 0.0, 1.0);
+    [self.stringLabel startFixedHideWithTransform:&transform duration:1.0 stepTime:0.1];
+    [self.attributedLabel startFixedHideWithTransform:&transform duration:1.0 stepTime:0.1];
 }
 
 
@@ -351,6 +413,39 @@
         _exit2Btn = button;
     }
     return _exit2Btn;
+}
+
+- (XPQLabel *)stringLabel {
+    if (!_stringLabel) {
+        _stringLabel = [[XPQLabel alloc] init];
+        _stringLabel.text = @"这里是一串普通的文本文字。";
+        _stringLabel.backgroundColor = [UIColor colorWithWhite:0.1 alpha:0.2];
+    }
+    return _stringLabel;
+}
+
+- (XPQLabel *)attributedLabel {
+    if (!_attributedLabel) {
+        _attributedLabel = [[XPQLabel alloc] init];
+        NSMutableAttributedString *attriString = [[NSMutableAttributedString alloc] initWithString:@"this is attributed string."];
+        //把this的字体颜色变为红色
+        [attriString addAttribute:(NSString *)kCTForegroundColorAttributeName
+                            value:(id)[UIColor redColor].CGColor
+                            range:NSMakeRange(0, 4)];
+        //把is变为绿色
+        [attriString addAttribute:(NSString *)kCTForegroundColorAttributeName
+                            value:(id)[UIColor greenColor].CGColor
+                            range:NSMakeRange(5, 2)];
+        //改变this的字体，value必须是一个CTFontRef
+        [attriString addAttribute:(NSString *)kCTFontAttributeName value:(id)CFBridgingRelease(CTFontCreateWithName((CFStringRef)[UIFont boldSystemFontOfSize:12].fontName, 20, NULL)) range:NSMakeRange(8, 10)];
+        //给this加上下划线，value可以在指定的枚举中选择
+        [attriString addAttribute:(NSString *)kCTUnderlineStyleAttributeName
+                            value:(id)[NSNumber numberWithInt:kCTUnderlineStyleDouble]
+                            range:NSMakeRange(19, 6)];
+        _attributedLabel.attributedText = attriString;
+        _attributedLabel.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1];
+    }
+    return _attributedLabel;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -45,6 +45,7 @@
 - (void)awakeFromNib{
     
     [self initData];
+    [super awakeFromNib];
 }
 
 - (instancetype)init
