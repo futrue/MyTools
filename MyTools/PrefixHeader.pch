@@ -22,11 +22,13 @@
 #ifdef __OBJC__
   #import <Foundation/Foundation.h>
   #import <UIKit/UIKit.h>
+
 #import "Masonry.h"
 #import "YYKit.h"
 #import "UIView+Tools.h"
 #import "UIView+Category.h"
 #import "UIControlFastGet.h"
+#import "GroupSettingVC.h"
 
 #endif
 

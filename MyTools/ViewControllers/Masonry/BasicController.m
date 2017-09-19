@@ -14,7 +14,7 @@
 
 
 @interface BasicController ()
-
+@property (nonatomic, strong) UIView *grayView;
 @end
 
 @implementation BasicController
@@ -28,7 +28,7 @@
 
     [self test2];
     
-    
+    [self specialAnimate];
 }
 
 - (void)test1 {
@@ -118,6 +118,64 @@
     }];
 
 }
+
+- (void)specialAnimate {
+    UIView *redView = [[UIView alloc] init];
+    redView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:redView];
+    
+    UIView *redView1 = [[UIView alloc] init];
+    redView1.backgroundColor = [UIColor purpleColor];
+    [redView addSubview:redView1];
+
+    UIView *grayView = [[UIView alloc] init];
+    grayView.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:grayView];
+    self.grayView = grayView;
+    
+    UIView *yellowView = [[UIView alloc] init];
+    yellowView.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:yellowView];
+    
+    [redView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.offset(20.f);
+        make.bottom.offset(-20.f);
+        make.height.equalTo(@(30.f));
+    }];
+    
+    [redView1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.offset(0.f);
+        make.bottom.offset(-5.f);
+        make.size.mas_equalTo(CGSizeMake(50, 20));
+    }];
+
+    [grayView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(redView.mas_right).offset(30.f);
+        make.height.width.bottom.mas_equalTo(redView);
+    }];
+    
+    [yellowView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(grayView.mas_right).offset(30.f);
+        make.height.width.bottom.mas_equalTo(redView);
+        make.right.offset(-20.f);
+        
+        // 优先级设置为priorityLow，最高1000（默认）
+        make.left.equalTo(redView.mas_right).offset(30.f).priorityLow(250);
+    }];
+}
+
+// 点击屏幕移除蓝色View
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.grayView removeFromSuperview];
+    [UIView animateWithDuration:1.0 animations:^{
+        [self.view layoutIfNeeded];
+    }];
+    /*
+     这里的三个View的宽度是根据约束自动推断设置的，对黄色的View设置了一个与红色View有关的priority(250)的优先级，它同时有对灰色View有个最高的优先级约束make.left.equalTo(grayView.mas_right).offset(30.f);。当点击屏幕，我将灰色View移除，此时第二优先级就是生效。
+     */
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

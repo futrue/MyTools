@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  PathView.h
 //  MyTools
 //
-//  Created by SGX on 17/1/4.
+//  Created by SongGuoxing on 2017/8/3.
 //  Copyright © 2017年 Xing. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface PathView : UIView
 
 @end
-

@@ -33,16 +33,33 @@
     [super viewDidLoad];
     // 64 = 0 http://www.jianshu.com/p/c0b8c5f131a0
 //    self.edgesForExtendedLayout = UIRectEdgeNone;
+    NSURL *url = [NSURL URLWithString:@"prefs:root=Bluetooth"];
+    if ([[UIApplication sharedApplication] canOpenURL:url])
+    {
+        [[UIApplication sharedApplication] openURL:url];
+    }
     
+
     [self startButton];
     [self endButton];
     [self commitButton];
     [self testView];
     [self setup];
     [self sortData:nil];
-
+    [self forTest];
 }
 
+- (void)forTest {
+    for (int i = 0; i < 10; i++) {
+        if (i == 5) {
+            continue;// 结束本次循环，不会打印 5
+        }
+        if (i == 8) {
+            break;// 跳出循环，不会走 9 ，10
+        }
+        printf("num == %d",i);
+    }
+}
 - (void)createClass {
     // 创建一个名为 TangQiaoCustomView 的类，它是UIView的子类
     Class newClass = objc_allocateClassPair([UIView class], "TangQiaoCustomView", 0);

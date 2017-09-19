@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "MenuVC.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,10 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    UIViewController *vc = [[NSClassFromString(@"ViewController") alloc] init];//[[ViewController alloc] init]
+    UIViewController *vc = [[NSClassFromString(@"MenuVC") alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-//    UIViewController *disVc = [[NSClassFromString(@"TableViewTransformVC") alloc] init];
-//    [nav pushViewController:disVc animated:YES];
     self.window.rootViewController = nav;
     return YES;
 }
