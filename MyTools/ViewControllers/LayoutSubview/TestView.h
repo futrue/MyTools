@@ -10,5 +10,5 @@
 
 @interface TestView : UIView
 - (void)changeRandomColor;
-
+- (void)log;
 @end

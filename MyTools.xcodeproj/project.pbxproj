@@ -38,6 +38,7 @@
 		267B74B01F32FE3F00BAA830 /* PathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 267B74AF1F32FE3F00BAA830 /* PathView.m */; };
 		267B98F91F13A46F00012CE7 /* DropDownListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 267B98F81F13A46F00012CE7 /* DropDownListView.m */; };
 		2687CA411F29BBDE0005C844 /* TableViewTransformVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2687CA401F29BBDE0005C844 /* TableViewTransformVC.m */; };
+		269F51F81F8F074E00A63F2D /* SubTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 269F51F71F8F074E00A63F2D /* SubTestView.m */; };
 		26C1638C1EF8F78D000403CD /* PopMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C1638B1EF8F78D000403CD /* PopMenuVC.m */; };
 		26C1638F1EF8F7A5000403CD /* PopMeneData.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C1638E1EF8F7A5000403CD /* PopMeneData.m */; };
 		26C163921EF8F864000403CD /* Toolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C163911EF8F864000403CD /* Toolbar.m */; };
@@ -309,6 +310,8 @@
 		267B98F81F13A46F00012CE7 /* DropDownListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownListView.m; sourceTree = "<group>"; };
 		2687CA3F1F29BBDE0005C844 /* TableViewTransformVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewTransformVC.h; sourceTree = "<group>"; };
 		2687CA401F29BBDE0005C844 /* TableViewTransformVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewTransformVC.m; sourceTree = "<group>"; };
+		269F51F61F8F074E00A63F2D /* SubTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubTestView.h; sourceTree = "<group>"; };
+		269F51F71F8F074E00A63F2D /* SubTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubTestView.m; sourceTree = "<group>"; };
 		26C1638A1EF8F78D000403CD /* PopMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopMenuVC.h; sourceTree = "<group>"; };
 		26C1638B1EF8F78D000403CD /* PopMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopMenuVC.m; sourceTree = "<group>"; };
 		26C1638D1EF8F7A5000403CD /* PopMeneData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopMeneData.h; sourceTree = "<group>"; };
@@ -720,6 +723,8 @@
 				26619B531EEE37D500F53796 /* Layoutsubviews_test.m */,
 				26619B551EEE380A00F53796 /* TestView.h */,
 				26619B561EEE380A00F53796 /* TestView.m */,
+				269F51F61F8F074E00A63F2D /* SubTestView.h */,
+				269F51F71F8F074E00A63F2D /* SubTestView.m */,
 			);
 			path = LayoutSubview;
 			sourceTree = "<group>";
@@ -2116,6 +2121,7 @@
 				263AEA871F4682C500E12078 /* CustomView.m in Sources */,
 				8EFF588C1E23AA4500CCAB33 /* PhotosPreviewVC.m in Sources */,
 				261C07161ED9606F00941A40 /* GroupNetwork_testVC.m in Sources */,
+				269F51F81F8F074E00A63F2D /* SubTestView.m in Sources */,
 				8E3C3AA71E2DAFF00083DB33 /* WaterWaveVC.m in Sources */,
 				8EFF57C61E2320A900CCAB33 /* CityPickerView.m in Sources */,
 				2611325E1F160A890059A2C4 /* KVCSubObj.m in Sources */,

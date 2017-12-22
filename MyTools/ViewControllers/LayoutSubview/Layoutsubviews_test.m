@@ -9,6 +9,7 @@
 
 #import "Layoutsubviews_test.h"
 #import "TestView.h"
+#import "SubTestView.h"
 
 @interface Layoutsubviews_test ()
 @property (nonatomic, strong) NSTimer   *timer;
@@ -40,7 +41,7 @@
     // 2、addSubview会触发layoutSubviews [不完全正确,当frame为0时是不会触发的]
     // 3、设置view的Frame会触发layoutSubviews，当然前提是frame的值设置前后发生了变化 [正确]
     
-//        [self test_1];
+        [self test_1];
 //        [self test_2];
 //        [self test_3];
     
@@ -48,7 +49,7 @@
 //        [self test_4];
     
     // 5、改变一个UIView大小的时候也会触发父UIView上的layoutSubviews事件
-    [self test_5];
+//    [self test_5];
 }
 - (void)test_1
 {
@@ -61,7 +62,13 @@
      */
     
     TestView *test = [TestView new];
+//    [test log];
     [self.view addSubview:test];
+    
+    SubTestView *subtest = [SubTestView new];
+    [subtest log];
+    [self.view addSubview:subtest];
+
 }
 
 - (void)test_2

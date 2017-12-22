@@ -31,6 +31,9 @@
     [super layoutSubviews];
 }
 
+- (void)log {
+    NSLog(@"super log");
+}
 
 - (void)changeRandomColor {
     self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(change)];
