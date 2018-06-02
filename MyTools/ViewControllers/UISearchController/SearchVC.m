@@ -12,7 +12,6 @@
 @property (nonatomic, strong) UISearchController *searchC;
 @property (nonatomic, strong) UITableView *tableView;
 
-//@property (nonatomic, strong) NSMutableArray *allCities;
 @property (nonatomic, strong) NSMutableArray *filteredCities;
 @property (nonatomic, strong) NSArray *items;
 
@@ -72,18 +71,11 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//    if (self.searchC.active) {
-//        return self.items.count;
-////        return self.cityKeys.count;
-//    } else {
-//    }
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (!self.searchC.active) {
-//        NSString *key = self.cityKeys[section];
-//        NSArray *citySection = self.cityDict[key];
         return self.items.count;
     } else {
         return self.filteredCities.count;
@@ -101,9 +93,6 @@
     // 根据UISearchController的active属性来判断cell中的内容
     if (!self.searchC.active) {
         cell.textLabel.text = [self.items objectAtIndex:indexPath.row];
-
-//        NSString *key = self.cityKeys[indexPath.section];
-//        cell.textLabel.text = [self.cityDict[key] objectAtIndex:indexPath.row];
     } else {
         cell.textLabel.text = self.filteredCities[indexPath.row];
     }

@@ -47,7 +47,7 @@
     // 坐标转换比较详细的讲解 http://www.jianshu.com/p/92e2d0200eb4
     
     // 关于UIView的很多方法讲解 http://www.cnblogs.com/pengyingh/articles/2379476.html
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.view.backgroundColor = [UIColor colorWithWhite:1 alpha:0.9];
     [self.view addSubview:self.redView];
     [self.view addSubview:self.orangeView];
@@ -60,18 +60,18 @@
     // 从中间往两边读：把黄色view中绿色view转化为在self.view中的位置  或者 把绿色view从黄色view中的位置转为在self.view中的位置
     
     // 在viewDidLoad里，self.view还没有加载在window上，得传self.view，不能传nil；   若是传nil，需要在viewDidAppear里做操作；（viewWillAppear都不行）
-    CGRect rect1 = [self.yellowView convertRect:self.greenView.frame toView:self.view];
-    //         rect1 = [self.view convertRect:self.greenView.frame fromView:self.yellowView];
-    NSLog(@"--黄色控件里的绿色view在self.view的位置%@",NSStringFromCGRect(rect1));//{{160, 160}, {70, 70}}
+    CGRect rect1 = [self.redView convertRect:self.yellowView.frame toView:self.view];
+             rect1 = [self.view convertRect:self.yellowView.frame fromView:self.redView];
+    NSLog(@"--黄色控件里的绿色view在self.view的位置%@",NSStringFromCGRect(rect1));//{110, 110}, {200, 200}
     
     // 要计算出某个view相对于self.view的位置，得传view.bounds,不能用frame,即rect3
     CGRect rect2 = [self.greenView convertRect:self.greenView.frame toView:self.view];
     rect2 = [self.view convertRect:self.greenView.frame fromView:self.greenView];//❌
-    NSLog(@"-greenView-frame--%@",NSStringFromCGRect(rect2));//{{210, 210}, {70, 70}} ❌
+//    NSLog(@"-greenView-frame--%@",NSStringFromCGRect(rect2));//{{210, 210}, {70, 70}} ❌
     
     CGRect rect3 = [self.greenView convertRect:self.greenView.bounds toView:self.view];
     //         rect3 = [self.view convertRect:self.greenView.bounds fromView:self.greenView];//✔️
-    NSLog(@"-greenView-bounds--%@",NSStringFromCGRect(rect3));//{{160, 160}, {70, 70}} ✔️
+    NSLog(@"-greenView-frame--%@",NSStringFromCGRect(rect3));//{{160, 160}, {70, 70}} ✔️
     
     CGPoint originInSuperview = [self.redView convertPoint:CGPointZero fromView:self.yellowView];// {100, 100}
     originInSuperview = [self.view convertPoint:self.yellowView.frame.origin fromView:self.redView]; //{110, 110}

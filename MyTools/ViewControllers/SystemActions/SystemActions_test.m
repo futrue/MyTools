@@ -8,6 +8,8 @@
 
 #import "SystemActions_test.h"
 #import <AVFoundation/AVFoundation.h>
+#import <AssetsLibrary/AssetsLibrary.h>
+#import <Photos/Photos.h>
 
 @interface SystemActions_test ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 //need import AVFoundation.framework ?
@@ -101,7 +103,7 @@
     _ShowimageView = [[UIImageView alloc]initWithFrame:CGRectMake(30, 350, 300, 300)];
     _ShowimageView.backgroundColor = [UIColor brownColor];
     [self.view addSubview:_ShowimageView];
-
+    _ShowimageView.image = [UIImage imageNamed:@"IMG_0003.JPG"];
 }
 
 - (void)addClick:(UIButton *)sender {
@@ -220,7 +222,6 @@
 // 打开相册
 - (void)openPictureLibrary
 {
-    
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary ]){
         UIImagePickerController *picker = [[UIImagePickerController alloc]init];
         // 打开相册
@@ -314,7 +315,22 @@
     if ([self.view viewWithTag:501]) {
         [self performSelector:@selector(selectPic:) withObject:image afterDelay:0.1];
     }
-    
+    NSURL *imageUrl = [info valueForKey:UIImagePickerControllerReferenceURL];
+
+    ALAssetsLibrary *assetsLibrary = [[ALAssetsLibrary alloc] init];
+    //根据url获取asset信息, 并通过block进行回调
+    [assetsLibrary assetForURL:imageUrl resultBlock:^(ALAsset *asset) {
+        ALAssetRepresentation *representation = [asset defaultRepresentation];
+        NSString *imageName = representation.filename;
+        //获取图片
+        UIImage *image = info[UIImagePickerControllerOriginalImage];
+
+        NSLog(@"imageName:%@", imageName);
+    } failureBlock:^(NSError *error) {
+        NSLog(@"%@", [error localizedDescription]);
+    }];
+
+
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

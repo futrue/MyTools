@@ -16,24 +16,18 @@
 #import "UIView_Convert.h"
 #import "SearchVC.h"
 #import "RegularExpressionVC.h"
-#import "RandomFllowersVC.h"
 #import "HoleGuide_test.h"
-#import "CoreAnimation_test.h"
-#import "CAAnimation_test.h"
 #import "Alert_test.h"
-#import "PhotosPreviewVC.h"
 #import "YYLabel_testVC.h"
 #import "StackView_test.h"
 #import "Masonry_test.h"
-#import "Date_testVC.h"
 #import "Wave&DropDown.h"
+#import "RadioAndShadowTestVC.h"
 #import "SystemActions_test.h"
 #import "CustomButton_test.h"
-#import "CustomButton_test2.h"
 #import "Slider_testVC.h"
 #import "DropDownMenuVC.h"
 #import "DropDownMenuVC2.h"
-#import "WaterWaveVC.h"
 #import "SQLite_test.h"
 #import "Contact_test.h"
 #import "LyricLabelVC.h"
@@ -41,8 +35,6 @@
 #import "GroupNetwork_testVC.h"
 #import "Layoutsubviews_test.h"
 #import "TestViewController.h"
-#import "PopMenuVC.h"
-#import "ClipImageVC.h"
 #import "ExpandTest.h"
 #import "KVC_Test.h"
 #import "TableViewTransformVC.h"
@@ -145,7 +137,6 @@
 - (void)addGroups {
     [self setUpFastEntryGroup];
     [self setUpViewLayoutGroup];
-    [self setUpAnimatonsGroup];
     [self setUpSpecialsGroup];
     [self setUpToolsGroup];
     [self setUpSkillsGroup];
@@ -190,24 +181,6 @@
     [self.groups addObject:group];
 }
 
-- (void)setUpAnimatonsGroup
-{
-    // 创建组模型
-    SettingGroup *group = [[SettingGroup alloc] init];
-    group.items = [NSMutableArray array];
-    group.headerTitle = @"视图动画类";
-    NSMutableArray *array = [NSMutableArray array];
-    [array addObject:NSStringFromClass([CoreAnimation_test class])];
-    [array addObject:NSStringFromClass([CAAnimation_test class])];
-    for (int i = 0; i < array.count; i ++) {
-        // 创建行模型
-        SettingItem *item = [SettingItem itemWithTitle:array[i]];
-        item.destVcClass = NSClassFromString(array[i]);
-        [group.items addObject:item];
-    }
-    [self.groups addObject:group];
-}
-
 - (void)setUpSpecialsGroup
 {
     // 创建组模型
@@ -216,17 +189,15 @@
     group.headerTitle = @"视图特效类";
     NSMutableArray *array = [NSMutableArray array];
     [array addObject:NSStringFromClass([VisualEffectVC class])];
-    [array addObject:NSStringFromClass([WaterWaveVC class])];
     [array addObject:NSStringFromClass([Wave_DropDown class])];
     [array addObject:NSStringFromClass([RatingVC class])];
     [array addObject:NSStringFromClass([CustomButton_test class])];
-    [array addObject:NSStringFromClass([CustomButton_test2 class])];
     [array addObject:NSStringFromClass([LyricLabelVC class])];
     [array addObject:NSStringFromClass([CityPickerVC class])];
     [array addObject:NSStringFromClass([CollectionView_test class])];
-    [array addObject:NSStringFromClass([RandomFllowersVC class])];
     [array addObject:NSStringFromClass([HoleGuide_test class])];
     [array addObject:NSStringFromClass([Alert_test class])];
+    [array addObject:NSStringFromClass([RadioAndShadowTestVC class])];
 
     for (int i = 0; i < array.count; i ++) {
         // 创建行模型
@@ -248,9 +219,6 @@
     [array addObject:NSStringFromClass([DropDownMenuVC class])];
     [array addObject:NSStringFromClass([DropDownMenuVC2 class])];
     [array addObject:NSStringFromClass([Contact_test class])];
-    [array addObject:NSStringFromClass([PhotosPreviewVC class])];
-    [array addObject:NSStringFromClass([PopMenuVC class])];
-    [array addObject:NSStringFromClass([ClipImageVC class])];
     for (int i = 0; i < array.count; i ++) {
         // 创建行模型
         SettingItem *item = [SettingItem itemWithTitle:array[i]];
@@ -269,7 +237,6 @@
     NSMutableArray *array = [NSMutableArray array];
     [array addObject:NSStringFromClass([CaculatorController class])];
     [array addObject:NSStringFromClass([SQLite_test class])];
-    [array addObject:NSStringFromClass([Date_testVC class])];
     [array addObject:NSStringFromClass([KVC_Test class])];
     [array addObject:NSStringFromClass([UIViewTouchVC class])];
     [array addObject:NSStringFromClass([RegularExpressionVC class])];

@@ -41,9 +41,9 @@
     // 2、addSubview会触发layoutSubviews [不完全正确,当frame为0时是不会触发的]
     // 3、设置view的Frame会触发layoutSubviews，当然前提是frame的值设置前后发生了变化 [正确]
     
-        [self test_1];
+//        [self test_1];
 //        [self test_2];
-//        [self test_3];
+        [self test_3];
     
     // 4、滚动一个UIScrollView会触发layoutSubviews[错误,不用滚动就会触发]
 //        [self test_4];

@@ -27,10 +27,8 @@
     CGFloat max = MIN(TEST_IMG.size.height, TEST_IMG.size.width);
     imageView.size = CGSizeMake(max, max);
     imageView.contentMode = UIViewContentModeScaleAspectFill;
-    imageView.clipsToBounds = YES;
     imageView.center = CGPointMake(self.view.center.x, self.view.center.y - 100);
     [imageView addRoundedCorners:UIRectCornerBottomLeft|UIRectCornerBottomRight cornerRadius:10];
-//    [imageView clipsToRound];
     [self.view addSubview:imageView];
 
     UIImageView *imageView2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"images"]];

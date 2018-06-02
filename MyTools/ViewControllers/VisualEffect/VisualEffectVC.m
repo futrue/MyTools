@@ -31,12 +31,6 @@
     [self.scrollView addSubview:self.effectView];
     [self.effectView.contentView addSubview:self.vibrancyEffectView];
     
-    // UIView相关
-    
-    [self.view addSubview:self.inputView1];
-    [self.view addSubview:self.inputView2];
-    [self.view addSubview:self.button];
-    self.showFirstView = YES;
     [self.view addSubview:self.slider];
 }
 
@@ -95,59 +89,6 @@
  */
 
 
-- (UIButton *)button {
-    if (!_button) {
-        _button = [UIButton buttonWithType:UIButtonTypeCustom];
-        _button.backgroundColor = [UIColor orangeColor];
-        _button.frame = CGRectMake(20, self.view.bounds.size.height - 80, 40, 40);
-        _button.layer.cornerRadius = 4;
-        _button.layer.masksToBounds = YES;
-        UIImage *img = [UIView imageWithRoundedCornersSize:20 usingImage:[UIImage imageNamed:@"images.jpeg"]];
-
-        [_button setImage:img forState:UIControlStateNormal];
-//        [_button ClipSquareViewToRound];
-        [_button addTarget:self action:@selector(change:) forControlEvents:UIControlEventTouchUpInside];
-    }
-    return _button;
-}
-
-- (void)change:(UIButton *)btn {
-    btn.selected = !btn.isSelected;
-    self.showFirstView = btn.selected;
-}
-
-- (void)setShowFirstView:(BOOL)showFirstView {
-    _showFirstView = showFirstView;
-    
-    if (_showFirstView) {
-        CGPoint center = self.inputView1.center;
-        center.x = self.view.bounds.size.width / 2;
-        
-        CGPoint center2 = self.inputView2.center;
-        center2.x = center.x + self.view.bounds.size.width;
-        
-        [UIView animateWithDuration:1 animations:^{
-            self.inputView1.center = center;
-            self.inputView2.center = center2;
-            
-        } completion:nil];
-        
-        
-    } else {
-        CGPoint center = self.inputView1.center;
-        center.x = self.view.bounds.size.width / 2;
-        
-        CGPoint center2 = self.inputView2.center;
-        center2.x = center.x - self.view.bounds.size.width;
-        
-        [UIView animateWithDuration:1 animations:^{
-            self.inputView1.center = center2;
-            self.inputView2.center = center;
-            
-        } completion:nil];
-        
-    }
-}
 
 - (UISlider *)slider {
     if (!_slider) {
@@ -163,31 +104,6 @@
 - (void)valueChange:(UISlider *)slider {
     CGFloat progress = slider.value;
     self.effectView.alpha = progress;
-    //    CGPoint center = self.imageView.center;
-    //    CGRect frame = self.imageView.frame;
-    //    frame.size.width  *= (1 + progress);
-    //    frame.size.height *= (1 + progress);
-    //    self.imageView.frame = frame;
-}
-
-- (UIView *)inputView1 {
-    if (!_inputView1) {
-        _inputView1 = [[UIView alloc] initWithFrame:CGRectMake(10, self.view.bounds.size.height - 150, self.view.bounds.size.width - 20, 30)];
-        _inputView1.backgroundColor = [UIColor redColor];
-        [_inputView1 clipsToRound];
-        UILabel *label = [[UILabel alloc] init];
-        label.text = @"";
-    }
-    return _inputView1;
-}
-
-- (UIView *)inputView2 {
-    if (!_inputView2) {
-        _inputView2 = [[UIView alloc] initWithFrame:CGRectMake((self.inputView1.center.x + self.view.bounds.size.width) - (self.view.bounds.size.width - 20)/2, self.view.bounds.size.height - 150, self.view.bounds.size.width - 20, 30)];
-        [_inputView2 setCornerRadius:8];
-        _inputView2.backgroundColor = [UIColor yellowColor];
-    }
-    return _inputView2;
 }
 
 
