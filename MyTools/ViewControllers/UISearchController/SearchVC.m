@@ -114,6 +114,9 @@
         _tableView = [[UITableView alloc] init];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        UITextField *searchField = [self.searchC.searchBar valueForKey:@"_searchField"];
+        searchField.frame = CGRectMake(0, 0, self.view.width, 44);
+        _tableView.tableHeaderView = searchField;
         _tableView.tableFooterView = nil;
     }
     return _tableView;
@@ -130,10 +133,10 @@
         _searchC.dimsBackgroundDuringPresentation = NO;
         [_searchC.searchBar sizeToFit];
         // searchBar 下面的排序按钮
-        _searchC.searchBar.scopeButtonTitles = [NSArray arrayWithObjects:@"BOY",@"GIRL",@"ALL",nil];
+       // _searchC.searchBar.scopeButtonTitles = [NSArray arrayWithObjects:@"BOY",@"GIRL",@"ALL",nil];
 
 //        _searchC.searchBar.backgroundColor = UIColorFromHex(0xdcdcdc);
-        self.tableView.tableHeaderView = _searchC.searchBar;
+        //self.tableView.tableHeaderView = _searchC.searchBar;
     }
     return _searchC;
 }

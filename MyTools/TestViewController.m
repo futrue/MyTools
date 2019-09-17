@@ -7,9 +7,8 @@
 //
 
 #import "TestViewController.h"
-#import "TestView.h"
 #import <objc/runtime.h>
-#import "DidaPopViewManager.h"
+
 #define RADIANS(degrees) (((degrees) * M_PI) / 180.0)
 
 #define kMaxLength 11

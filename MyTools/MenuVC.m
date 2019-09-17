@@ -9,8 +9,6 @@
 #import "MenuVC.h"
 
 #import "Quantz2D_VC.h"
-#import "VisualEffectVC.h"
-#import "CaculatorController.h"
 #import "CityPickerVC.h"
 #import "CollectionView_test.h"
 #import "UIView_Convert.h"
@@ -19,9 +17,8 @@
 #import "HoleGuide_test.h"
 #import "Alert_test.h"
 #import "YYLabel_testVC.h"
-#import "StackView_test.h"
+#import "DemoTwoController.h"
 #import "Masonry_test.h"
-#import "Wave&DropDown.h"
 #import "RadioAndShadowTestVC.h"
 #import "SystemActions_test.h"
 #import "CustomButton_test.h"
@@ -33,14 +30,11 @@
 #import "LyricLabelVC.h"
 #import "RatingVC.h"
 #import "GroupNetwork_testVC.h"
-#import "Layoutsubviews_test.h"
 #import "TestViewController.h"
-#import "ExpandTest.h"
 #import "KVC_Test.h"
 #import "TableViewTransformVC.h"
 #import "AttributedLabel_test.h"
 #import "BezierPath_Test.h"
-#import "UIViewTouchVC.h"
 
 @interface MenuVC ()<UISearchResultsUpdating,UISearchControllerDelegate>
 
@@ -161,10 +155,9 @@
     group.items = [NSMutableArray array];
     group.headerTitle = @"视图布局类";
     NSMutableArray *array = [NSMutableArray array];
-    [array addObject:NSStringFromClass([Layoutsubviews_test class])];
     [array addObject:NSStringFromClass([TableViewTransformVC class])];
     [array addObject:NSStringFromClass([Quantz2D_VC class])];
-    [array addObject:NSStringFromClass([StackView_test class])];
+    [array addObject:NSStringFromClass([DemoTwoController class])];
     [array addObject:NSStringFromClass([Masonry_test class])];
     [array addObject:NSStringFromClass([UIView_Convert class])];
     [array addObject:NSStringFromClass([BezierPath_Test class])];
@@ -188,8 +181,6 @@
     group.items = [NSMutableArray array];
     group.headerTitle = @"视图特效类";
     NSMutableArray *array = [NSMutableArray array];
-    [array addObject:NSStringFromClass([VisualEffectVC class])];
-    [array addObject:NSStringFromClass([Wave_DropDown class])];
     [array addObject:NSStringFromClass([RatingVC class])];
     [array addObject:NSStringFromClass([CustomButton_test class])];
     [array addObject:NSStringFromClass([LyricLabelVC class])];
@@ -235,10 +226,8 @@
     group.items = [NSMutableArray array];
     group.headerTitle = @"技能提升类";
     NSMutableArray *array = [NSMutableArray array];
-    [array addObject:NSStringFromClass([CaculatorController class])];
     [array addObject:NSStringFromClass([SQLite_test class])];
     [array addObject:NSStringFromClass([KVC_Test class])];
-    [array addObject:NSStringFromClass([UIViewTouchVC class])];
     [array addObject:NSStringFromClass([RegularExpressionVC class])];
     for (int i = 0; i < array.count; i ++) {
         // 创建行模型
@@ -257,7 +246,6 @@
     group.headerTitle = @"其他 | 三方";
     NSMutableArray *array = [NSMutableArray array];
     [array addObject:NSStringFromClass([GroupNetwork_testVC class])];
-    [array addObject:NSStringFromClass([ExpandTest class])];
     [array addObject:NSStringFromClass([AttributedLabel_test class])];
     [array addObject:NSStringFromClass([YYLabel_testVC class])];
     [array addObject:NSStringFromClass([SystemActions_test class])];
